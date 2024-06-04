@@ -1,7 +1,14 @@
-<html>
-<head><title>502 Bad Gateway</title></head>
+<!doctype html>
+<html data-adblockkey="MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANDrp2lz7AOmADaN8tA50LsWcjLFyQFcb/P2Txc58oYOeILb3vBw7J6f4pamkAQVSQuqYsKx3YzdUHCvbVZvFUsCAwEAAQ==_JCqJbdUKwO0hNN+k7WY6YDucI8hpX4xmR4X/gwr+8s69H1JAYeXwdldYHqiXvXfUGApHtU2Nx7bjmCbq9uvLtQ==" lang="en" style="background: #2B2B2B;">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAADElEQVQI12P4//8/AAX+Av7czFnnAAAAAElFTkSuQmCC">
+    <link rel="preconnect" href="https://www.google.com" crossorigin>
+</head>
 <body>
-<center><h1>502 Bad Gateway</h1></center>
-<hr><center>nginx</center>
+<div id="target" style="opacity: 0"></div>
+<script>window.park = "eyJ1dWlkIjoiN2E3YTEzMGEtYWM0OS00YzRhLTgzODEtZmNhNmFmYjBiMmI2IiwicGFnZV90aW1lIjoxNzE3NDk1OTkxLCJwYWdlX3VybCI6Imh0dHA6Ly93dzI1LmZyZWUuZHN3YW5nLmdhL2NsYXNoL3Byb3hpZXM/c3ViaWQxPTIwMjQwNjA0LTIwMTMtMTE0ZS05ODhkLTE0ZGY1Y2IyY2VjZiIsInBhZ2VfbWV0aG9kIjoiR0VUIiwicGFnZV9yZXF1ZXN0Ijp7InN1YmlkMSI6IjIwMjQwNjA0LTIwMTMtMTE0ZS05ODhkLTE0ZGY1Y2IyY2VjZiJ9LCJwYWdlX2hlYWRlcnMiOnt9LCJob3N0Ijoid3cyNS5mcmVlLmRzd2FuZy5nYSIsImlwIjoiMjAuMTAyLjQ2LjIwOCJ9Cg==";</script>
+<script src="/bFJYInKEs.js"></script>
 </body>
 </html>
