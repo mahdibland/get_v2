@@ -5,85 +5,925 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: KR>加拿大 多伦多, server: si.1808.site, port: 30002, type: vmess, uuid: 05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d, alterId: 0, cipher: auto, tls: true, servername: obdii.cfd, network: ws, ws-opts: {path: /linkws, headers: {Host: obdii.cfd}}}
-  - {name: cloud2-4, server: si.1808.site, port: 30002, type: vmess, uuid: d3d8b781-f30d-4902-8eb0-58b1ca936bec, alterId: 0, cipher: auto, tls: true, servername: cc2.1808.site, network: ws, ws-opts: {path: /hgqqvws, headers: {Host: cc2.1808.site}}}
-  - {name: HK akile zz1, server: "[2409:8c5c:110:73::310b]", port: 45000, type: hysteria2, password: 8QQCvI60Tw, obfs: salamander, obfs-password: Gggg, sni: hk.johnsheng.icu}
-  - {name: jp zz, server: "[2409:8c5c:110:73::310b]", port: 10711, type: hysteria2, password: DYha6tkX3W5exmZ4GpatoBp7avQ, sni: bing.com, skip-cert-verify: true}
-  - {name: BR dci, server: 144.22.202.82, port: 47820, type: hysteria2, password: FUWVJkbTKWKHYrPbOoYtO4TRHbY, sni: fuckyour.mom, skip-cert-verify: true}
+  - {name: 台湾1 | ⬇️ 1.4MB/s, server: pranab.ns.cloudflare.com, port: 443, type: trojan, password: Aimer, sni: epcca.ambercc.filegear-sg.me, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560&proxyip=ts.hpc.tw", headers: {Host: epcca.ambercc.filegear-sg.me}}}
+  - {name: 台湾2 | ⬇️ 3.1MB/s, server: thaddeus.ns.cloudflare.com, port: 443, type: trojan, password: Aimer, sni: epcca.ambercc.filegear-sg.me, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560&proxyip=ts.hpc.tw", headers: {Host: epcca.ambercc.filegear-sg.me}}}
+  - {name: 台湾4 | ⬇️ 2.6MB/s, server: 108.165.152.113, port: 443, type: trojan, password: Aimer, sni: epcca.ambercc.filegear-sg.me, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560&proxyip=ts.hpc.tw", headers: {Host: epcca.ambercc.filegear-sg.me}}}
+  - {name: 台湾5 | ⬇️ 1.4MB/s, server: 27.50.49.136, port: 443, type: trojan, password: Aimer, sni: epcca.ambercc.filegear-sg.me, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560&proxyip=ts.hpc.tw", headers: {Host: epcca.ambercc.filegear-sg.me}}}
+  - {name: 台湾6 | ⬇️ 2.7MB/s, server: 108.165.152.207, port: 443, type: trojan, password: Aimer, sni: epccd.ambercc.filegear-sg.me, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560&proxyip=ts.hpc.tw", headers: {Host: epccd.ambercc.filegear-sg.me}}}
+  - {name: 台湾7 | ⬇️ 1.1MB/s, server: 103.116.7.235, port: 443, type: trojan, password: Aimer, sni: epccd.ambercc.filegear-sg.me, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560&proxyip=ts.hpc.tw", headers: {Host: epccd.ambercc.filegear-sg.me}}}
+  - {name: 其他1-未识别 | ⬇️ 1.3MB/s, server: kip.ns.cloudflare.com, port: 443, type: trojan, password: Aimer, sni: epccd.ambercc.filegear-sg.me, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560&proxyip=ts.hpc.tw", headers: {Host: epccd.ambercc.filegear-sg.me}}}
+  - {name: 台湾8 | ⬇️ 3.2MB/s, server: 167.68.4.58, port: 443, type: trojan, password: Aimer, sni: epccd.ambercc.filegear-sg.me, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560&proxyip=ts.hpc.tw", headers: {Host: epccd.ambercc.filegear-sg.me}}}
+  - {name: 新加坡1 | ⬇️ 2.1MB/s, server: 18.141.233.166, port: 443, type: ss, cipher: aes-256-gcm, password: amazongreatvpn}
+  - {name: 美国1 | ⬇️ 3.7MB/s, server: tk.hzlt.tkddns.xyz, port: 22641, type: vmess, uuid: 98e96c9f-4bb3-39d4-9a2c-fac04257f7c7, alterId: 2, cipher: auto, tls: true, servername: tk.hzlt.tkddns.xyz, network: ws, ws-opts: {path: /, headers: {Host: tk.hzlt.tkddns.xyz}}}
+  - {name: 台湾9 | ⬇️ 3.7MB/s, server: damien.ns.cloudflare.com, port: 443, type: trojan, password: Aimer, sni: epccd.ambercc.filegear-sg.me, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560&proxyip=ts.hpc.tw", headers: {Host: epccd.ambercc.filegear-sg.me}}}
+  - {name: 英国1 | ⬇️ 4.1MB/s, server: 212.102.53.194, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks}
+  - {name: 美国2 | ⬇️ 1.6MB/s, server: 37.19.198.244, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks}
+  - {name: 美国3 | ⬇️ 2.2MB/s, server: 37.19.198.160, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks}
+  - {name: 美国4 | ⬇️ 2.2MB/s, server: 37.19.198.243, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks}
+  - {name: 美国5 | ⬇️ 1.0MB/s, server: 156.146.38.170, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks}
+  - {name: 美国6 | ⬇️ 2.4MB/s, server: 173.244.56.6, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks}
+  - {name: 美国7 | ⬇️ 1.8MB/s, server: 212.102.47.131, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks}
+  - {name: 荷兰1 | ⬇️ 2.4MB/s, server: 109.201.152.181, port: 443, type: ss, cipher: aes-128-cfb, password: shadowsocks}
+  - {name: 美国8 | ⬇️ 4.8MB/s, server: 212.102.47.132, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks}
+  - {name: 英国2 | ⬇️ 1.4MB/s, server: 212.102.53.195, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks}
+  - {name: 英国3 | ⬇️ 2.1MB/s, server: 212.102.53.78, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks}
+  - {name: 瑞士1 | ⬇️ 1.5MB/s, server: 156.146.62.162, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks}
+  - {name: 瑞士2 | ⬇️ 1.9MB/s, server: 156.146.62.161, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks}
+  - {name: 瑞士3 | ⬇️ 2.9MB/s, server: 156.146.62.164, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks}
+  - {name: 瑞士4 | ⬇️ 3.3MB/s, server: 156.146.62.163, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks}
+  - {name: 英国4 | ⬇️ 2.4MB/s, server: 212.102.53.198, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks}
+  - {name: 日本1 | ⬇️ 2.6MB/s, server: 149.22.87.241, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks}
+  - {name: 美国9 | ⬇️ 4.2MB/s, server: 34.219.82.5, port: 443, type: ss, cipher: aes-256-gcm, password: amazongreatvpn}
+  - {name: 美国10 | ⬇️ 4.9MB/s, server: www.wn03.cc, port: 80, type: vmess, uuid: 2f38f848-a899-4c87-9807-207a41615e3c, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/rongseven?ed=2048", headers: {Host: us.freeyyds.dpdns.org}}}
+  - {name: 美国11 | ⬇️ 2.8MB/s, server: u8.huvicloud.com, port: 443, type: vmess, uuid: 6796611b-260e-4d63-9016-20c27b12e420, alterId: 0, cipher: auto, tls: true, servername: u8.huvicloud.com, network: ws, ws-opts: {path: /6796611b-260e-4d63-9016-20c27b12e420, headers: {Host: u8.huvicloud.com}}}
+  - {name: 美国12 | ⬇️ 3.4MB/s, server: xcf029.facai2024.com, port: 443, type: vmess, uuid: 9ce4526a-c500-4c66-99b0-048e4b6b5663, alterId: 0, cipher: auto, tls: true, servername: xcf029.facai2024.com, network: ws, ws-opts: {path: /9ce4526a, headers: {Host: xcf029.facai2024.com}}}
+  - {name: 香港2 | ⬇️ 1.2MB/s, server: hk2.lrzdx.uk, port: 443, type: vmess, uuid: db69d5bc-d36c-4903-f471-74b98c5cefe5, alterId: 0, cipher: auto, tls: true, servername: hk2.lrzdx.uk, network: ws, ws-opts: {path: /register, headers: {Host: hk2.lrzdx.uk}}}
+  - {name: 新加坡2 | ⬇️ 1.7MB/s, server: a.886968.xyz, port: 21369, type: vmess, uuid: 151187b1-c8f3-4c32-ac72-3679e264a7a3, alterId: 0, cipher: auto, tls: true, servername: a.886968.xyz, network: ws, ws-opts: {path: /wfdef, headers: {Host: a.886968.xyz}}}
+  - {name: 美国13 | ⬇️ 1.8MB/s, server: xc125-1.meiziba5566.com, port: 443, type: vmess, uuid: 6b95d340-30a5-47bd-ac53-49584e5d4ddf, alterId: 0, cipher: auto, tls: true, servername: xc125-1.meiziba5566.com, network: ws, ws-opts: {path: /6b95d340, headers: {Host: xc125-1.meiziba5566.com}}}
+  - {name: 法国1 | ⬇️ 2.3MB/s, server: 172.67.198.187, port: 443, type: vmess, uuid: 93ea486a-bada-42a4-ac38-d088b320fa1e, alterId: 0, cipher: auto, tls: true, servername: xmivideo.cfd, network: ws, ws-opts: {path: /linkws, headers: {Host: xmivideo.cfd}}}
+  - {name: 美国14 | ⬇️ 2.2MB/s, server: 3sdfgvcxxx.938.pp.ua, port: 443, type: vmess, uuid: 0212fab5-e93c-4904-b7a8-187fd535f354, alterId: 0, cipher: auto, tls: true, servername: 3sdfgvcxxx.938.pp.ua, network: ws, ws-opts: {path: /P879mtCoHQqaWO67qEaMINZ1, headers: {Host: 3sdfgvcxxx.938.pp.ua}}}
+  - {name: 香港3 | ⬇️ 3.1MB/s, server: 104.17.137.127, port: 443, type: vmess, uuid: 47eab0de-97f9-49be-f2f3-2e4eb17268e6, alterId: 0, cipher: auto, tls: true, servername: hk.niskakowski.ggff.net, network: ws, ws-opts: {path: /aa, headers: {Host: hk.niskakowski.ggff.net}}}
+  - {name: 美国15 | ⬇️ 2.5MB/s, server: 172.67.214.21, port: 443, type: trojan, password: 4be20cf1-6af1-4e87-ae5a-80d6ec30fecd, sni: 8fg.191268.xyz, network: ws, ws-opts: {path: /%2FtvowuLtlha3zxRV9PS, headers: {Host: 8fg.191268.xyz}}}
+  - {name: 美国16 | ⬇️ 1.4MB/s, server: 104.21.16.1, port: 443, type: trojan, password: ad4a124c-12fb-4467-9ad0-dc6d9b509ac0, sni: 7bhui.191262.xyz, network: ws, ws-opts: {path: /%2FwGgR8FyAGgRCKSiyxgvJgLl, headers: {Host: 7bhui.191262.xyz}}}
+  - {name: 美国17 | ⬇️ 4.4MB/s, server: xc011-2.meiziba5566.com, port: 443, type: vmess, uuid: 42576a04-5a4d-4c7e-fcb4-a8582ab46031, alterId: 0, cipher: auto, tls: true, servername: xc011-2.meiziba5566.com, network: ws, ws-opts: {path: /xc1234, headers: {Host: xc011-2.meiziba5566.com}}}
+  - {name: 美国18 | ⬇️ 2.3MB/s, server: xcmg19.dtkj0328.com, port: 443, type: vmess, uuid: bc94f742-0e7b-4cf8-e897-6214f9bec8da, alterId: 0, cipher: auto, tls: true, servername: xcmg19.dtkj0328.com, network: ws, ws-opts: {path: /xcmg1234, headers: {Host: xcmg19.dtkj0328.com}}}
+  - {name: 法国2 | ⬇️ 4.1MB/s, server: 104.19.32.0, port: 443, type: vmess, uuid: 93ea486a-bada-42a4-ac38-d088b320fa1e, alterId: 0, cipher: auto, tls: true, servername: xmivideo.cfd, network: ws, ws-opts: {path: /linkws, headers: {Host: xmivideo.cfd}}}
+  - {name: 香港4 | ⬇️ 1.1MB/s, server: hk2.lrzdx.uk, port: 443, type: vmess, uuid: db69d5bc-d36c-4903-f471-74b98c5cefe5, alterId: 0, cipher: auto, tls: true, servername: hk2.lrzdx.uk, network: ws, ws-opts: {path: /register, headers: {Host: hk2.lrzdx.uk}}}
+  - {name: 美国19 | ⬇️ 2.1MB/s, server: xcf036.facai2024.com, port: 443, type: vmess, uuid: 96c585de-c7e4-41cb-a232-9aba535ea9ac, alterId: 0, cipher: auto, tls: true, servername: xcf036.facai2024.com, network: ws, ws-opts: {path: /96c585de, headers: {Host: xcf036.facai2024.com}}}
+  - {name: 美国20 | ⬇️ 1.8MB/s, server: ray.skymirror.cc, port: 443, type: vmess, uuid: c99929e1-9c82-4a33-d11e-f177247b8f63, alterId: 0, cipher: auto, tls: true, servername: ray.skymirror.cc, network: ws, ws-opts: {path: /, headers: {Host: ray.skymirror.cc}}}
+  - {name: 美国21 | ⬇️ 2.2MB/s, server: xc115-1.meiziba5566.com, port: 443, type: vmess, uuid: f40a8d65-a9ac-42ce-ebcc-9e6447a9866d, alterId: 0, cipher: auto, tls: true, servername: xc115-1.meiziba5566.com, network: ws, ws-opts: {path: /f40a8d65, headers: {Host: xc115-1.meiziba5566.com}}}
+  - {name: 美国23 | ⬇️ 1.4MB/s, server: tk.hzlt.tkddns.xyz, port: 22643, type: vmess, uuid: 98e96c9f-4bb3-39d4-9a2c-fac04257f7c7, alterId: 2, cipher: auto, tls: true, servername: zxjp-c.tkong.cc, network: ws, ws-opts: {path: /, headers: {Host: zxjp-c.tkong.cc}}}
+  - {name: 香港5 | ⬇️ 3.3MB/s, server: 114.132.40.118, port: 30018, type: ss, cipher: aes-256-gcm, password: ffc75281-6c9a-4cd7-8af6-aaa12eb7496f}
+  - {name: 阿拉伯酋长国1 | ⬇️ 1.1MB/s, server: 212.192.2.202, port: 20008, type: ss, cipher: aes-256-gcm, password: JtLTCxf6}
+  - {name: 美国24 | ⬇️ 3.4MB/s, server: xcf037.facai2024.com, port: 443, type: vmess, uuid: d9863037-0463-4615-e972-36ba9662d1e9, alterId: 0, cipher: auto, tls: true, servername: xcf037.facai2024.com, network: ws, ws-opts: {path: /d9863037, headers: {Host: xcf037.facai2024.com}}}
+  - {name: 美国25 | ⬇️ 4.3MB/s, server: 64.181.204.186, port: 47262, type: hysteria2, password: b72ba5d5-2d5e-45b7-93b5-236d343baa7c, sni: www.bing.com, skip-cert-verify: true}
+  - {name: 美国26 | ⬇️ 3.2MB/s, server: gs03-1.guoshi1520.com, port: 443, type: vmess, uuid: 82ff6d30-2920-4ebd-b95c-b016ede1a841, alterId: 0, cipher: auto, tls: true, servername: gs03-1.guoshi1520.com, network: ws, ws-opts: {path: /82ff6d30, headers: {Host: gs03-1.guoshi1520.com}}}
+  - {name: 美国27 | ⬇️ 1.4MB/s, server: time.is, port: 443, type: vmess, uuid: b526926d-1474-4f41-985e-8b877cb840cd, alterId: 0, cipher: auto, tls: true, servername: time.is, network: ws, ws-opts: {path: /, headers: {Host: shs111.kejixiaoqi666.store}}}
+  - {name: 香港6 | ⬇️ 1.3MB/s, server: e9ba756a-svdwg0-swd5ff-f1v1.hk.p5pv.com, port: 80, type: vmess, uuid: 9cccea7a-b6ab-11eb-a0fc-f23c913c8d2b, alterId: 2, cipher: auto, tls: false, network: ws, ws-opts: {path: /, headers: {Host: broadcastlv.chat.bilibili.com}}}
+  - {name: 美国28 | ⬇️ 1.2MB/s, server: 172.66.168.209, port: 443, type: vmess, uuid: 5428dcc2-9950-4404-b8a5-9dac82acb210, alterId: 0, cipher: auto, tls: true, servername: maXNEtVIP-usA-VP3.nETKH3.SiTE, network: ws, ws-opts: {path: /linkws, headers: {Host: maXNEtVIP-usA-VP3.nETKH3.SiTE}}}
+  - {name: 香港7 | ⬇️ 4.9MB/s, server: kefu.neter2.top, port: 40066, type: vmess, uuid: 2b5597ec-d990-4aaf-b4f9-c19308873901, alterId: 0, cipher: auto, tls: false}
+  - {name: 美国30 | ⬇️ 1.7MB/s, server: xcmg19.dtkj0328.com, port: 443, type: vmess, uuid: bc94f742-0e7b-4cf8-e897-6214f9bec8da, alterId: 0, cipher: auto, tls: true, servername: xcmg19.dtkj0328.com, network: ws, ws-opts: {path: /xcmg1234, headers: {Host: xcmg19.dtkj0328.com}}}
+  - {name: 日本3 | ⬇️ 2.3MB/s, server: jp4.vip2.g2.moonbase.life, port: 35244, type: vmess, uuid: 46a539d2-d3ba-4a6e-aedb-b727d2fc60f8, alterId: 0, cipher: auto, tls: true, servername: jp4.vip2.g2.moonbase.life, network: ws, ws-opts: {path: /home, headers: {Host: web.xcjs.info}}}
+  - {name: 美国31 | ⬇️ 1.8MB/s, server: xcf036.facai2024.com, port: 443, type: vmess, uuid: 96c585de-c7e4-41cb-a232-9aba535ea9ac, alterId: 0, cipher: auto, tls: true, servername: xcf036.facai2024.com, network: ws, ws-opts: {path: /96c585de, headers: {Host: xcf036.facai2024.com}}}
+  - {name: 美国32 | ⬇️ 1.2MB/s, server: xc131.meiziba5566.com, port: 443, type: vmess, uuid: 3e3d59fd-bc2f-407d-a8d3-a1dee0a257d5, alterId: 0, cipher: auto, tls: true, servername: xc131.meiziba5566.com, network: ws, ws-opts: {path: /3e3d59fd, headers: {Host: xc131.meiziba5566.com}}}
+  - {name: 美国33 | ⬇️ 2.4MB/s, server: xc125-1.meiziba5566.com, port: 443, type: vmess, uuid: 6b95d340-30a5-47bd-ac53-49584e5d4ddf, alterId: 0, cipher: auto, tls: true, servername: xc125-1.meiziba5566.com, network: ws, ws-opts: {path: /6b95d340, headers: {Host: xc125-1.meiziba5566.com}}}
+  - {name: 日本4 | ⬇️ 1.4MB/s, server: jp3.vip2.g2.moonbase.life, port: 35243, type: vmess, uuid: 46a539d2-d3ba-4a6e-aedb-b727d2fc60f8, alterId: 0, cipher: auto, tls: true, servername: jp3.vip2.g2.moonbase.life, network: ws, ws-opts: {path: /home, headers: {Host: web.xcjs.info}}}
+  - {name: 美国48 | ⬇️ 1.9MB/s, server: 4e4babe3-suk9s0-t234dm-eso8.hy2.gotochinatown.net, port: 8443, type: hysteria2, password: 3c461e2c-9d13-11ef-8563-f23c913c8d2b, sni: 4e4babe3-suk9s0-t234dm-eso8.hy2.gotochinatown.net}
+  - {name: 美国52 | ⬇️ 3.5MB/s, server: 192-227-152-86.nip.io, port: 61001, type: hysteria2, password: 5CBqBh6MeDq6GajcilBiDg%3D%3D, sni: 192-227-152-86.nip.io, skip-cert-verify: true}
+  - {name: 美国55 | ⬇️ 1.2MB/s, server: 4dbb0b72-sv8cg0-t5fh9u-1uni.hy2.gotochinatown.net, port: 8443, type: hysteria2, password: adbd0a82-3336-11ed-bd7c-f23c913c8d2b, sni: 4dbb0b72-sv8cg0-t5fh9u-1uni.hy2.gotochinatown.net}
+  - {name: 英国6 | ⬇️ 3.2MB/s, server: 131.145.20.31, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: WstuSnlu4ieA9M0L}
+  - {name: 英国8 | ⬇️ 3.5MB/s, server: series-a2-mec.samanehha.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: u17T3BvpYaaiuW2c}
+  - {name: 美国58 | ⬇️ 1.5MB/s, server: 104.21.57.88, port: 443, type: trojan, password: 072f4db4-d89d-420d-9d9e-045ed8d5c9cc, sni: 10tyu.iran.pp.ua, network: ws, ws-opts: {path: /VEP415T5mby2DulPWRIwOavJd, headers: {Host: 10tyu.iran.pp.ua}}}
+  - {name: 美国60 | ⬇️ 3.5MB/s, server: cloudgetservice.mcloudservice.site, port: 443, type: trojan, password: aTArbZ2F0E, sni: uSa-vp-27.bLAzECLOUD.SITE, network: ws, ws-opts: {path: /linkvkws, headers: {Host: uSa-vp-27.bLAzECLOUD.SITE}}}
+  - {name: 美国61 | ⬇️ 2.7MB/s, server: 37.19.198.236, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks}
+  - {name: 美国64 | ⬇️ 1.1MB/s, server: 104.21.34.159, port: 443, type: trojan, password: 15b24b56-d667-4fa8-b548-f3dc942fb461, sni: 2qwert.2031.pp.ua, network: ws, ws-opts: {path: /4p35eUnmGxQ8YJFJxz, headers: {Host: 2qwert.2031.pp.ua}}}
+  - {name: 英国9 | ⬇️ 4.0MB/s, server: series-a2-me.varzesh360.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: Bog0ELmMM9DSxDdQ}
+  - {name: 英国10 | ⬇️ 2.1MB/s, server: admin.c3.webramz.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: Bog0ELmMM9DSxDdQ}
+  - {name: 英国11 | ⬇️ 3.7MB/s, server: admin.c1.webramz.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 1xO2cqPazqjGfCfd}
+  - {name: 英国12 | ⬇️ 2.4MB/s, server: 85.210.120.237, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: Bog0ELmMM9DSxDdQ}
+  - {name: 日本7 | ⬇️ 2.6MB/s, server: 162.159.152.2, port: 443, type: trojan, password: bpb-trojan, sni: zamim340.ggff.net, network: ws, ws-opts: {path: "/tr?ed=2560", headers: {Host: zamim340.ggff.net}}}
+  - {name: 英国13 | ⬇️ 3.6MB/s, server: series-a2.varzesh360.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: mps3FwmDjLrWaOVg}
+  - {name: 美国67 | ⬇️ 4.7MB/s, server: 104.21.96.1, port: 443, type: trojan, password: ad4a124c-12fb-4467-9ad0-dc6d9b509ac0, sni: 7nnn.191262.xyz, network: ws, ws-opts: {path: /wGgR8FyAGgRCKSiyxgvJgLl, headers: {Host: 7nnn.191262.xyz}}}
+  - {name: 英国14 | ⬇️ 4.3MB/s, server: series-a2-me.samanehha.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: Bog0ELmMM9DSxDdQ}
+  - {name: 美国68 | ⬇️ 4.7MB/s, server: 173.244.56.9, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks}
+  - {name: 英国15 | ⬇️ 2.5MB/s, server: series-a2-mec.varzesh360.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: u17T3BvpYaaiuW2c}
+  - {name: 美国71 | ⬇️ 1.6MB/s, server: 2e21cedc-fa8b-4020-8ce0-390e7287d276.890603.pp.ua, port: 443, type: vmess, uuid: 5453ae26-250d-4e79-b4ec-016baf806865, alterId: 0, cipher: auto, tls: true, servername: 2e21cedc-fa8b-4020-8ce0-390e7287d276.890603.pp.ua, network: ws, ws-opts: {path: /h7Rcu0y30lhjdVjJ3gc4aj, headers: {Host: 2E21CEDc-fA8B-4020-8Ce0-390e7287D276.890603.Pp.uA}}}
+  - {name: 美国72 | ⬇️ 3.8MB/s, server: xiaoqi.yangmie.online, port: 443, type: vmess, uuid: 52d85359-57fe-4c5a-b5e5-5c2c8020c01c, alterId: 0, cipher: auto, tls: true, servername: xiaoqi.yangmie.online, network: ws, ws-opts: {path: /, headers: {Host: shs111.kejixiaoqi666.store}}}
+  - {name: 英国16 | ⬇️ 3.2MB/s, server: series-a2.samanehha.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: mps3FwmDjLrWaOVg}
+  - {name: 美国77 | ⬇️ 4.9MB/s, server: 172.67.70.92, port: 443, type: trojan, password: bpb-trojan, sni: zamim340.ggff.net, network: ws, ws-opts: {path: "/tr?ed=2560", headers: {Host: zamim340.ggff.net}}}
+  - {name: 日本9 | ⬇️ 1.1MB/s, server: 104.17.148.22, port: 443, type: trojan, password: redfree8, sni: ipsychO.SUEx12.Ir, network: ws, ws-opts: {path: "/trre5IzbZ9IZZMddtw?ed=2560", headers: {Host: ipsychO.SUEx12.Ir}}}
+  - {name: 美国84 | ⬇️ 2.5MB/s, server: 104.21.32.1, port: 443, type: trojan, password: ad4a124c-12fb-4467-9ad0-dc6d9b509ac0, sni: 7bhui.191262.xyz, network: ws, ws-opts: {path: /wGgR8FyAGgRCKSiyxgvJgLl, headers: {Host: 7bhui.191262.xyz}}}
+  - {name: 法国3 | ⬇️ 3.1MB/s, server: 172.67.200.13, port: 443, type: vmess, uuid: 5f726fe3-d82e-4da5-a711-8af0cbb2b682, alterId: 0, cipher: auto, tls: true, servername: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top, network: ws, ws-opts: {path: /azumase.ren, headers: {Host: 1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top}}}
+  - {name: 英国17 | ⬇️ 3.4MB/s, server: freakconfig13.felafel.org, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 1xO2cqPazqjGfCfd}
+  - {name: 加拿大3 | ⬇️ 3.4MB/s, server: 149.22.95.183, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks}
+  - {name: 美国89 | ⬇️ 2.7MB/s, server: yymg12.haibo168.com, port: 443, type: vmess, uuid: 555dc227-b8a9-4c41-eb2b-b6f9e5bdc168, alterId: 0, cipher: auto, tls: true, servername: yymg12.haibo168.com, network: ws, ws-opts: {path: /yymg1234, headers: {Host: yymg12.haibo168.com}}}
+  - {name: 英国18 | ⬇️ 3.0MB/s, server: series-a1.samanehha.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: W74XFALLLuw6m5IA}
+  - {name: 美国96 | ⬇️ 4.1MB/s, server: time.is, port: 443, type: vmess, uuid: a0656826-bfc3-4ec9-bb92-7139cbdb1a04, alterId: 0, cipher: auto, tls: true, servername: time.is, network: ws, ws-opts: {path: /, headers: {Host: shs111.kejixiaoqi666.store}}}
+  - {name: 法国4 | ⬇️ 4.0MB/s, server: irvideo.cfd, port: 443, type: vmess, uuid: e537f2f5-2a0c-4f59-92c9-832ca6433bf3, alterId: 0, cipher: auto, tls: true, servername: irvideo.cfd, network: ws, ws-opts: {path: /linkws, headers: {Host: irvideo.cfd}}}
+  - {name: 印度1 | ⬇️ 4.0MB/s, server: 64.227.132.137, port: 80, type: ss, cipher: chacha20-ietf-poly1305, password: NYK8DkZqmDLUQzaSbb2K3N}
+  - {name: 美国104 | ⬇️ 3.3MB/s, server: cloudgetservice.mcloudservice.site, port: 443, type: vmess, uuid: 5428dcc2-9950-4404-b8a5-9dac82acb210, alterId: 0, cipher: auto, tls: true, servername: cloudgetservice.mcloudservice.site, network: ws, ws-opts: {path: /linkws, headers: {Host: maXNEtVIP-usA-VP3.nETKH3.SiTE}}}
+  - {name: 英国19 | ⬇️ 3.4MB/s, server: 74.177.196.15, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: W74XFALLLuw6m5IA}
+  - {name: 英国20 | ⬇️ 4.0MB/s, server: 74.177.160.126, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 69MUii7VDwMqh7Hz}
+  - {name: 美国113 | ⬇️ 3.1MB/s, server: 104.21.86.44, port: 443, type: trojan, password: 072f4db4-d89d-420d-9d9e-045ed8d5c9cc, sni: 10xcvb.he2022.filegear-sg.me, network: ws, ws-opts: {path: /VEP415T5mby2DulPWRIwOavJd, headers: {Host: 10xcvb.he2022.filegear-sg.me}}}
+  - {name: 日本13 | ⬇️ 2.7MB/s, server: 149.22.87.204, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks}
+  - {name: 芬兰7 | ⬇️ 2.7MB/s, server: 104.26.4.60, port: 443, type: trojan, password: bpb-trojan, sni: zamim340.ggff.net, skip-cert-verify: true, network: ws, ws-opts: {path: "/tr?ed=2560", headers: {Host: zamim340.ggff.net}}}
+  - {name: 美国120 | ⬇️ 4.3MB/s, server: 104.21.112.1, port: 443, type: trojan, password: ad4a124c-12fb-4467-9ad0-dc6d9b509ac0, sni: 7bhui.191262.xyz, network: ws, ws-opts: {path: /wGgR8FyAGgRCKSiyxgvJgLl, headers: {Host: 7bhui.191262.xyz}}}
+  - {name: 英国21 | ⬇️ 5.0MB/s, server: 74.177.196.15, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 1xO2cqPazqjGfCfd}
+  - {name: 英国22 | ⬇️ 4.0MB/s, server: admin.c4.webramz.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 69MUii7VDwMqh7Hz}
+  - {name: 美国123 | ⬇️ 3.8MB/s, server: 212.102.47.129, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks}
+  - {name: 英国24 | ⬇️ 4.5MB/s, server: series-a1.samanehha.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: mps3FwmDjLrWaOVg}
+  - {name: 新加坡4 | ⬇️ 4.1MB/s, server: 104.26.5.60, port: 443, type: trojan, password: bpb-trojan, sni: zamim340.ggff.net, network: ws, ws-opts: {path: "/tr?ed=2560", headers: {Host: zamim340.ggff.net}}}
+  - {name: 英国25 | ⬇️ 3.9MB/s, server: api.namasha.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: u17T3BvpYaaiuW2c}
+  - {name: 英国26 | ⬇️ 4.0MB/s, server: admin.c2.webramz.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: WstuSnlu4ieA9M0L}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - KR>加拿大 多伦多
-      - cloud2-4
-      - HK akile zz1
-      - jp zz
-      - BR dci
+      - 台湾1 | ⬇️ 1.4MB/s
+      - 台湾2 | ⬇️ 3.1MB/s
+      - 台湾4 | ⬇️ 2.6MB/s
+      - 台湾5 | ⬇️ 1.4MB/s
+      - 台湾6 | ⬇️ 2.7MB/s
+      - 台湾7 | ⬇️ 1.1MB/s
+      - 其他1-未识别 | ⬇️ 1.3MB/s
+      - 台湾8 | ⬇️ 3.2MB/s
+      - 新加坡1 | ⬇️ 2.1MB/s
+      - 美国1 | ⬇️ 3.7MB/s
+      - 台湾9 | ⬇️ 3.7MB/s
+      - 英国1 | ⬇️ 4.1MB/s
+      - 美国2 | ⬇️ 1.6MB/s
+      - 美国3 | ⬇️ 2.2MB/s
+      - 美国4 | ⬇️ 2.2MB/s
+      - 美国5 | ⬇️ 1.0MB/s
+      - 美国6 | ⬇️ 2.4MB/s
+      - 美国7 | ⬇️ 1.8MB/s
+      - 荷兰1 | ⬇️ 2.4MB/s
+      - 美国8 | ⬇️ 4.8MB/s
+      - 英国2 | ⬇️ 1.4MB/s
+      - 英国3 | ⬇️ 2.1MB/s
+      - 瑞士1 | ⬇️ 1.5MB/s
+      - 瑞士2 | ⬇️ 1.9MB/s
+      - 瑞士3 | ⬇️ 2.9MB/s
+      - 瑞士4 | ⬇️ 3.3MB/s
+      - 英国4 | ⬇️ 2.4MB/s
+      - 日本1 | ⬇️ 2.6MB/s
+      - 美国9 | ⬇️ 4.2MB/s
+      - 美国10 | ⬇️ 4.9MB/s
+      - 美国11 | ⬇️ 2.8MB/s
+      - 美国12 | ⬇️ 3.4MB/s
+      - 香港2 | ⬇️ 1.2MB/s
+      - 新加坡2 | ⬇️ 1.7MB/s
+      - 美国13 | ⬇️ 1.8MB/s
+      - 法国1 | ⬇️ 2.3MB/s
+      - 美国14 | ⬇️ 2.2MB/s
+      - 香港3 | ⬇️ 3.1MB/s
+      - 美国15 | ⬇️ 2.5MB/s
+      - 美国16 | ⬇️ 1.4MB/s
+      - 美国17 | ⬇️ 4.4MB/s
+      - 美国18 | ⬇️ 2.3MB/s
+      - 法国2 | ⬇️ 4.1MB/s
+      - 香港4 | ⬇️ 1.1MB/s
+      - 美国19 | ⬇️ 2.1MB/s
+      - 美国20 | ⬇️ 1.8MB/s
+      - 美国21 | ⬇️ 2.2MB/s
+      - 美国23 | ⬇️ 1.4MB/s
+      - 香港5 | ⬇️ 3.3MB/s
+      - 阿拉伯酋长国1 | ⬇️ 1.1MB/s
+      - 美国24 | ⬇️ 3.4MB/s
+      - 美国25 | ⬇️ 4.3MB/s
+      - 美国26 | ⬇️ 3.2MB/s
+      - 美国27 | ⬇️ 1.4MB/s
+      - 香港6 | ⬇️ 1.3MB/s
+      - 美国28 | ⬇️ 1.2MB/s
+      - 香港7 | ⬇️ 4.9MB/s
+      - 美国30 | ⬇️ 1.7MB/s
+      - 日本3 | ⬇️ 2.3MB/s
+      - 美国31 | ⬇️ 1.8MB/s
+      - 美国32 | ⬇️ 1.2MB/s
+      - 美国33 | ⬇️ 2.4MB/s
+      - 日本4 | ⬇️ 1.4MB/s
+      - 美国48 | ⬇️ 1.9MB/s
+      - 美国52 | ⬇️ 3.5MB/s
+      - 美国55 | ⬇️ 1.2MB/s
+      - 英国6 | ⬇️ 3.2MB/s
+      - 英国8 | ⬇️ 3.5MB/s
+      - 美国58 | ⬇️ 1.5MB/s
+      - 美国60 | ⬇️ 3.5MB/s
+      - 美国61 | ⬇️ 2.7MB/s
+      - 美国64 | ⬇️ 1.1MB/s
+      - 英国9 | ⬇️ 4.0MB/s
+      - 英国10 | ⬇️ 2.1MB/s
+      - 英国11 | ⬇️ 3.7MB/s
+      - 英国12 | ⬇️ 2.4MB/s
+      - 日本7 | ⬇️ 2.6MB/s
+      - 英国13 | ⬇️ 3.6MB/s
+      - 美国67 | ⬇️ 4.7MB/s
+      - 英国14 | ⬇️ 4.3MB/s
+      - 美国68 | ⬇️ 4.7MB/s
+      - 英国15 | ⬇️ 2.5MB/s
+      - 美国71 | ⬇️ 1.6MB/s
+      - 美国72 | ⬇️ 3.8MB/s
+      - 英国16 | ⬇️ 3.2MB/s
+      - 美国77 | ⬇️ 4.9MB/s
+      - 日本9 | ⬇️ 1.1MB/s
+      - 美国84 | ⬇️ 2.5MB/s
+      - 法国3 | ⬇️ 3.1MB/s
+      - 英国17 | ⬇️ 3.4MB/s
+      - 加拿大3 | ⬇️ 3.4MB/s
+      - 美国89 | ⬇️ 2.7MB/s
+      - 英国18 | ⬇️ 3.0MB/s
+      - 美国96 | ⬇️ 4.1MB/s
+      - 法国4 | ⬇️ 4.0MB/s
+      - 印度1 | ⬇️ 4.0MB/s
+      - 美国104 | ⬇️ 3.3MB/s
+      - 英国19 | ⬇️ 3.4MB/s
+      - 英国20 | ⬇️ 4.0MB/s
+      - 美国113 | ⬇️ 3.1MB/s
+      - 日本13 | ⬇️ 2.7MB/s
+      - 芬兰7 | ⬇️ 2.7MB/s
+      - 美国120 | ⬇️ 4.3MB/s
+      - 英国21 | ⬇️ 5.0MB/s
+      - 英国22 | ⬇️ 4.0MB/s
+      - 美国123 | ⬇️ 3.8MB/s
+      - 英国24 | ⬇️ 4.5MB/s
+      - 新加坡4 | ⬇️ 4.1MB/s
+      - 英国25 | ⬇️ 3.9MB/s
+      - 英国26 | ⬇️ 4.0MB/s
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - KR>加拿大 多伦多
-      - cloud2-4
-      - HK akile zz1
-      - jp zz
-      - BR dci
+      - 台湾1 | ⬇️ 1.4MB/s
+      - 台湾2 | ⬇️ 3.1MB/s
+      - 台湾4 | ⬇️ 2.6MB/s
+      - 台湾5 | ⬇️ 1.4MB/s
+      - 台湾6 | ⬇️ 2.7MB/s
+      - 台湾7 | ⬇️ 1.1MB/s
+      - 其他1-未识别 | ⬇️ 1.3MB/s
+      - 台湾8 | ⬇️ 3.2MB/s
+      - 新加坡1 | ⬇️ 2.1MB/s
+      - 美国1 | ⬇️ 3.7MB/s
+      - 台湾9 | ⬇️ 3.7MB/s
+      - 英国1 | ⬇️ 4.1MB/s
+      - 美国2 | ⬇️ 1.6MB/s
+      - 美国3 | ⬇️ 2.2MB/s
+      - 美国4 | ⬇️ 2.2MB/s
+      - 美国5 | ⬇️ 1.0MB/s
+      - 美国6 | ⬇️ 2.4MB/s
+      - 美国7 | ⬇️ 1.8MB/s
+      - 荷兰1 | ⬇️ 2.4MB/s
+      - 美国8 | ⬇️ 4.8MB/s
+      - 英国2 | ⬇️ 1.4MB/s
+      - 英国3 | ⬇️ 2.1MB/s
+      - 瑞士1 | ⬇️ 1.5MB/s
+      - 瑞士2 | ⬇️ 1.9MB/s
+      - 瑞士3 | ⬇️ 2.9MB/s
+      - 瑞士4 | ⬇️ 3.3MB/s
+      - 英国4 | ⬇️ 2.4MB/s
+      - 日本1 | ⬇️ 2.6MB/s
+      - 美国9 | ⬇️ 4.2MB/s
+      - 美国10 | ⬇️ 4.9MB/s
+      - 美国11 | ⬇️ 2.8MB/s
+      - 美国12 | ⬇️ 3.4MB/s
+      - 香港2 | ⬇️ 1.2MB/s
+      - 新加坡2 | ⬇️ 1.7MB/s
+      - 美国13 | ⬇️ 1.8MB/s
+      - 法国1 | ⬇️ 2.3MB/s
+      - 美国14 | ⬇️ 2.2MB/s
+      - 香港3 | ⬇️ 3.1MB/s
+      - 美国15 | ⬇️ 2.5MB/s
+      - 美国16 | ⬇️ 1.4MB/s
+      - 美国17 | ⬇️ 4.4MB/s
+      - 美国18 | ⬇️ 2.3MB/s
+      - 法国2 | ⬇️ 4.1MB/s
+      - 香港4 | ⬇️ 1.1MB/s
+      - 美国19 | ⬇️ 2.1MB/s
+      - 美国20 | ⬇️ 1.8MB/s
+      - 美国21 | ⬇️ 2.2MB/s
+      - 美国23 | ⬇️ 1.4MB/s
+      - 香港5 | ⬇️ 3.3MB/s
+      - 阿拉伯酋长国1 | ⬇️ 1.1MB/s
+      - 美国24 | ⬇️ 3.4MB/s
+      - 美国25 | ⬇️ 4.3MB/s
+      - 美国26 | ⬇️ 3.2MB/s
+      - 美国27 | ⬇️ 1.4MB/s
+      - 香港6 | ⬇️ 1.3MB/s
+      - 美国28 | ⬇️ 1.2MB/s
+      - 香港7 | ⬇️ 4.9MB/s
+      - 美国30 | ⬇️ 1.7MB/s
+      - 日本3 | ⬇️ 2.3MB/s
+      - 美国31 | ⬇️ 1.8MB/s
+      - 美国32 | ⬇️ 1.2MB/s
+      - 美国33 | ⬇️ 2.4MB/s
+      - 日本4 | ⬇️ 1.4MB/s
+      - 美国48 | ⬇️ 1.9MB/s
+      - 美国52 | ⬇️ 3.5MB/s
+      - 美国55 | ⬇️ 1.2MB/s
+      - 英国6 | ⬇️ 3.2MB/s
+      - 英国8 | ⬇️ 3.5MB/s
+      - 美国58 | ⬇️ 1.5MB/s
+      - 美国60 | ⬇️ 3.5MB/s
+      - 美国61 | ⬇️ 2.7MB/s
+      - 美国64 | ⬇️ 1.1MB/s
+      - 英国9 | ⬇️ 4.0MB/s
+      - 英国10 | ⬇️ 2.1MB/s
+      - 英国11 | ⬇️ 3.7MB/s
+      - 英国12 | ⬇️ 2.4MB/s
+      - 日本7 | ⬇️ 2.6MB/s
+      - 英国13 | ⬇️ 3.6MB/s
+      - 美国67 | ⬇️ 4.7MB/s
+      - 英国14 | ⬇️ 4.3MB/s
+      - 美国68 | ⬇️ 4.7MB/s
+      - 英国15 | ⬇️ 2.5MB/s
+      - 美国71 | ⬇️ 1.6MB/s
+      - 美国72 | ⬇️ 3.8MB/s
+      - 英国16 | ⬇️ 3.2MB/s
+      - 美国77 | ⬇️ 4.9MB/s
+      - 日本9 | ⬇️ 1.1MB/s
+      - 美国84 | ⬇️ 2.5MB/s
+      - 法国3 | ⬇️ 3.1MB/s
+      - 英国17 | ⬇️ 3.4MB/s
+      - 加拿大3 | ⬇️ 3.4MB/s
+      - 美国89 | ⬇️ 2.7MB/s
+      - 英国18 | ⬇️ 3.0MB/s
+      - 美国96 | ⬇️ 4.1MB/s
+      - 法国4 | ⬇️ 4.0MB/s
+      - 印度1 | ⬇️ 4.0MB/s
+      - 美国104 | ⬇️ 3.3MB/s
+      - 英国19 | ⬇️ 3.4MB/s
+      - 英国20 | ⬇️ 4.0MB/s
+      - 美国113 | ⬇️ 3.1MB/s
+      - 日本13 | ⬇️ 2.7MB/s
+      - 芬兰7 | ⬇️ 2.7MB/s
+      - 美国120 | ⬇️ 4.3MB/s
+      - 英国21 | ⬇️ 5.0MB/s
+      - 英国22 | ⬇️ 4.0MB/s
+      - 美国123 | ⬇️ 3.8MB/s
+      - 英国24 | ⬇️ 4.5MB/s
+      - 新加坡4 | ⬇️ 4.1MB/s
+      - 英国25 | ⬇️ 3.9MB/s
+      - 英国26 | ⬇️ 4.0MB/s
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - KR>加拿大 多伦多
-      - cloud2-4
-      - HK akile zz1
-      - jp zz
-      - BR dci
+      - 台湾1 | ⬇️ 1.4MB/s
+      - 台湾2 | ⬇️ 3.1MB/s
+      - 台湾4 | ⬇️ 2.6MB/s
+      - 台湾5 | ⬇️ 1.4MB/s
+      - 台湾6 | ⬇️ 2.7MB/s
+      - 台湾7 | ⬇️ 1.1MB/s
+      - 其他1-未识别 | ⬇️ 1.3MB/s
+      - 台湾8 | ⬇️ 3.2MB/s
+      - 新加坡1 | ⬇️ 2.1MB/s
+      - 美国1 | ⬇️ 3.7MB/s
+      - 台湾9 | ⬇️ 3.7MB/s
+      - 英国1 | ⬇️ 4.1MB/s
+      - 美国2 | ⬇️ 1.6MB/s
+      - 美国3 | ⬇️ 2.2MB/s
+      - 美国4 | ⬇️ 2.2MB/s
+      - 美国5 | ⬇️ 1.0MB/s
+      - 美国6 | ⬇️ 2.4MB/s
+      - 美国7 | ⬇️ 1.8MB/s
+      - 荷兰1 | ⬇️ 2.4MB/s
+      - 美国8 | ⬇️ 4.8MB/s
+      - 英国2 | ⬇️ 1.4MB/s
+      - 英国3 | ⬇️ 2.1MB/s
+      - 瑞士1 | ⬇️ 1.5MB/s
+      - 瑞士2 | ⬇️ 1.9MB/s
+      - 瑞士3 | ⬇️ 2.9MB/s
+      - 瑞士4 | ⬇️ 3.3MB/s
+      - 英国4 | ⬇️ 2.4MB/s
+      - 日本1 | ⬇️ 2.6MB/s
+      - 美国9 | ⬇️ 4.2MB/s
+      - 美国10 | ⬇️ 4.9MB/s
+      - 美国11 | ⬇️ 2.8MB/s
+      - 美国12 | ⬇️ 3.4MB/s
+      - 香港2 | ⬇️ 1.2MB/s
+      - 新加坡2 | ⬇️ 1.7MB/s
+      - 美国13 | ⬇️ 1.8MB/s
+      - 法国1 | ⬇️ 2.3MB/s
+      - 美国14 | ⬇️ 2.2MB/s
+      - 香港3 | ⬇️ 3.1MB/s
+      - 美国15 | ⬇️ 2.5MB/s
+      - 美国16 | ⬇️ 1.4MB/s
+      - 美国17 | ⬇️ 4.4MB/s
+      - 美国18 | ⬇️ 2.3MB/s
+      - 法国2 | ⬇️ 4.1MB/s
+      - 香港4 | ⬇️ 1.1MB/s
+      - 美国19 | ⬇️ 2.1MB/s
+      - 美国20 | ⬇️ 1.8MB/s
+      - 美国21 | ⬇️ 2.2MB/s
+      - 美国23 | ⬇️ 1.4MB/s
+      - 香港5 | ⬇️ 3.3MB/s
+      - 阿拉伯酋长国1 | ⬇️ 1.1MB/s
+      - 美国24 | ⬇️ 3.4MB/s
+      - 美国25 | ⬇️ 4.3MB/s
+      - 美国26 | ⬇️ 3.2MB/s
+      - 美国27 | ⬇️ 1.4MB/s
+      - 香港6 | ⬇️ 1.3MB/s
+      - 美国28 | ⬇️ 1.2MB/s
+      - 香港7 | ⬇️ 4.9MB/s
+      - 美国30 | ⬇️ 1.7MB/s
+      - 日本3 | ⬇️ 2.3MB/s
+      - 美国31 | ⬇️ 1.8MB/s
+      - 美国32 | ⬇️ 1.2MB/s
+      - 美国33 | ⬇️ 2.4MB/s
+      - 日本4 | ⬇️ 1.4MB/s
+      - 美国48 | ⬇️ 1.9MB/s
+      - 美国52 | ⬇️ 3.5MB/s
+      - 美国55 | ⬇️ 1.2MB/s
+      - 英国6 | ⬇️ 3.2MB/s
+      - 英国8 | ⬇️ 3.5MB/s
+      - 美国58 | ⬇️ 1.5MB/s
+      - 美国60 | ⬇️ 3.5MB/s
+      - 美国61 | ⬇️ 2.7MB/s
+      - 美国64 | ⬇️ 1.1MB/s
+      - 英国9 | ⬇️ 4.0MB/s
+      - 英国10 | ⬇️ 2.1MB/s
+      - 英国11 | ⬇️ 3.7MB/s
+      - 英国12 | ⬇️ 2.4MB/s
+      - 日本7 | ⬇️ 2.6MB/s
+      - 英国13 | ⬇️ 3.6MB/s
+      - 美国67 | ⬇️ 4.7MB/s
+      - 英国14 | ⬇️ 4.3MB/s
+      - 美国68 | ⬇️ 4.7MB/s
+      - 英国15 | ⬇️ 2.5MB/s
+      - 美国71 | ⬇️ 1.6MB/s
+      - 美国72 | ⬇️ 3.8MB/s
+      - 英国16 | ⬇️ 3.2MB/s
+      - 美国77 | ⬇️ 4.9MB/s
+      - 日本9 | ⬇️ 1.1MB/s
+      - 美国84 | ⬇️ 2.5MB/s
+      - 法国3 | ⬇️ 3.1MB/s
+      - 英国17 | ⬇️ 3.4MB/s
+      - 加拿大3 | ⬇️ 3.4MB/s
+      - 美国89 | ⬇️ 2.7MB/s
+      - 英国18 | ⬇️ 3.0MB/s
+      - 美国96 | ⬇️ 4.1MB/s
+      - 法国4 | ⬇️ 4.0MB/s
+      - 印度1 | ⬇️ 4.0MB/s
+      - 美国104 | ⬇️ 3.3MB/s
+      - 英国19 | ⬇️ 3.4MB/s
+      - 英国20 | ⬇️ 4.0MB/s
+      - 美国113 | ⬇️ 3.1MB/s
+      - 日本13 | ⬇️ 2.7MB/s
+      - 芬兰7 | ⬇️ 2.7MB/s
+      - 美国120 | ⬇️ 4.3MB/s
+      - 英国21 | ⬇️ 5.0MB/s
+      - 英国22 | ⬇️ 4.0MB/s
+      - 美国123 | ⬇️ 3.8MB/s
+      - 英国24 | ⬇️ 4.5MB/s
+      - 新加坡4 | ⬇️ 4.1MB/s
+      - 英国25 | ⬇️ 3.9MB/s
+      - 英国26 | ⬇️ 4.0MB/s
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - KR>加拿大 多伦多
-      - cloud2-4
-      - HK akile zz1
-      - jp zz
-      - BR dci
+      - 台湾1 | ⬇️ 1.4MB/s
+      - 台湾2 | ⬇️ 3.1MB/s
+      - 台湾4 | ⬇️ 2.6MB/s
+      - 台湾5 | ⬇️ 1.4MB/s
+      - 台湾6 | ⬇️ 2.7MB/s
+      - 台湾7 | ⬇️ 1.1MB/s
+      - 其他1-未识别 | ⬇️ 1.3MB/s
+      - 台湾8 | ⬇️ 3.2MB/s
+      - 新加坡1 | ⬇️ 2.1MB/s
+      - 美国1 | ⬇️ 3.7MB/s
+      - 台湾9 | ⬇️ 3.7MB/s
+      - 英国1 | ⬇️ 4.1MB/s
+      - 美国2 | ⬇️ 1.6MB/s
+      - 美国3 | ⬇️ 2.2MB/s
+      - 美国4 | ⬇️ 2.2MB/s
+      - 美国5 | ⬇️ 1.0MB/s
+      - 美国6 | ⬇️ 2.4MB/s
+      - 美国7 | ⬇️ 1.8MB/s
+      - 荷兰1 | ⬇️ 2.4MB/s
+      - 美国8 | ⬇️ 4.8MB/s
+      - 英国2 | ⬇️ 1.4MB/s
+      - 英国3 | ⬇️ 2.1MB/s
+      - 瑞士1 | ⬇️ 1.5MB/s
+      - 瑞士2 | ⬇️ 1.9MB/s
+      - 瑞士3 | ⬇️ 2.9MB/s
+      - 瑞士4 | ⬇️ 3.3MB/s
+      - 英国4 | ⬇️ 2.4MB/s
+      - 日本1 | ⬇️ 2.6MB/s
+      - 美国9 | ⬇️ 4.2MB/s
+      - 美国10 | ⬇️ 4.9MB/s
+      - 美国11 | ⬇️ 2.8MB/s
+      - 美国12 | ⬇️ 3.4MB/s
+      - 香港2 | ⬇️ 1.2MB/s
+      - 新加坡2 | ⬇️ 1.7MB/s
+      - 美国13 | ⬇️ 1.8MB/s
+      - 法国1 | ⬇️ 2.3MB/s
+      - 美国14 | ⬇️ 2.2MB/s
+      - 香港3 | ⬇️ 3.1MB/s
+      - 美国15 | ⬇️ 2.5MB/s
+      - 美国16 | ⬇️ 1.4MB/s
+      - 美国17 | ⬇️ 4.4MB/s
+      - 美国18 | ⬇️ 2.3MB/s
+      - 法国2 | ⬇️ 4.1MB/s
+      - 香港4 | ⬇️ 1.1MB/s
+      - 美国19 | ⬇️ 2.1MB/s
+      - 美国20 | ⬇️ 1.8MB/s
+      - 美国21 | ⬇️ 2.2MB/s
+      - 美国23 | ⬇️ 1.4MB/s
+      - 香港5 | ⬇️ 3.3MB/s
+      - 阿拉伯酋长国1 | ⬇️ 1.1MB/s
+      - 美国24 | ⬇️ 3.4MB/s
+      - 美国25 | ⬇️ 4.3MB/s
+      - 美国26 | ⬇️ 3.2MB/s
+      - 美国27 | ⬇️ 1.4MB/s
+      - 香港6 | ⬇️ 1.3MB/s
+      - 美国28 | ⬇️ 1.2MB/s
+      - 香港7 | ⬇️ 4.9MB/s
+      - 美国30 | ⬇️ 1.7MB/s
+      - 日本3 | ⬇️ 2.3MB/s
+      - 美国31 | ⬇️ 1.8MB/s
+      - 美国32 | ⬇️ 1.2MB/s
+      - 美国33 | ⬇️ 2.4MB/s
+      - 日本4 | ⬇️ 1.4MB/s
+      - 美国48 | ⬇️ 1.9MB/s
+      - 美国52 | ⬇️ 3.5MB/s
+      - 美国55 | ⬇️ 1.2MB/s
+      - 英国6 | ⬇️ 3.2MB/s
+      - 英国8 | ⬇️ 3.5MB/s
+      - 美国58 | ⬇️ 1.5MB/s
+      - 美国60 | ⬇️ 3.5MB/s
+      - 美国61 | ⬇️ 2.7MB/s
+      - 美国64 | ⬇️ 1.1MB/s
+      - 英国9 | ⬇️ 4.0MB/s
+      - 英国10 | ⬇️ 2.1MB/s
+      - 英国11 | ⬇️ 3.7MB/s
+      - 英国12 | ⬇️ 2.4MB/s
+      - 日本7 | ⬇️ 2.6MB/s
+      - 英国13 | ⬇️ 3.6MB/s
+      - 美国67 | ⬇️ 4.7MB/s
+      - 英国14 | ⬇️ 4.3MB/s
+      - 美国68 | ⬇️ 4.7MB/s
+      - 英国15 | ⬇️ 2.5MB/s
+      - 美国71 | ⬇️ 1.6MB/s
+      - 美国72 | ⬇️ 3.8MB/s
+      - 英国16 | ⬇️ 3.2MB/s
+      - 美国77 | ⬇️ 4.9MB/s
+      - 日本9 | ⬇️ 1.1MB/s
+      - 美国84 | ⬇️ 2.5MB/s
+      - 法国3 | ⬇️ 3.1MB/s
+      - 英国17 | ⬇️ 3.4MB/s
+      - 加拿大3 | ⬇️ 3.4MB/s
+      - 美国89 | ⬇️ 2.7MB/s
+      - 英国18 | ⬇️ 3.0MB/s
+      - 美国96 | ⬇️ 4.1MB/s
+      - 法国4 | ⬇️ 4.0MB/s
+      - 印度1 | ⬇️ 4.0MB/s
+      - 美国104 | ⬇️ 3.3MB/s
+      - 英国19 | ⬇️ 3.4MB/s
+      - 英国20 | ⬇️ 4.0MB/s
+      - 美国113 | ⬇️ 3.1MB/s
+      - 日本13 | ⬇️ 2.7MB/s
+      - 芬兰7 | ⬇️ 2.7MB/s
+      - 美国120 | ⬇️ 4.3MB/s
+      - 英国21 | ⬇️ 5.0MB/s
+      - 英国22 | ⬇️ 4.0MB/s
+      - 美国123 | ⬇️ 3.8MB/s
+      - 英国24 | ⬇️ 4.5MB/s
+      - 新加坡4 | ⬇️ 4.1MB/s
+      - 英国25 | ⬇️ 3.9MB/s
+      - 英国26 | ⬇️ 4.0MB/s
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - KR>加拿大 多伦多
-      - cloud2-4
-      - HK akile zz1
-      - jp zz
-      - BR dci
+      - 台湾1 | ⬇️ 1.4MB/s
+      - 台湾2 | ⬇️ 3.1MB/s
+      - 台湾4 | ⬇️ 2.6MB/s
+      - 台湾5 | ⬇️ 1.4MB/s
+      - 台湾6 | ⬇️ 2.7MB/s
+      - 台湾7 | ⬇️ 1.1MB/s
+      - 其他1-未识别 | ⬇️ 1.3MB/s
+      - 台湾8 | ⬇️ 3.2MB/s
+      - 新加坡1 | ⬇️ 2.1MB/s
+      - 美国1 | ⬇️ 3.7MB/s
+      - 台湾9 | ⬇️ 3.7MB/s
+      - 英国1 | ⬇️ 4.1MB/s
+      - 美国2 | ⬇️ 1.6MB/s
+      - 美国3 | ⬇️ 2.2MB/s
+      - 美国4 | ⬇️ 2.2MB/s
+      - 美国5 | ⬇️ 1.0MB/s
+      - 美国6 | ⬇️ 2.4MB/s
+      - 美国7 | ⬇️ 1.8MB/s
+      - 荷兰1 | ⬇️ 2.4MB/s
+      - 美国8 | ⬇️ 4.8MB/s
+      - 英国2 | ⬇️ 1.4MB/s
+      - 英国3 | ⬇️ 2.1MB/s
+      - 瑞士1 | ⬇️ 1.5MB/s
+      - 瑞士2 | ⬇️ 1.9MB/s
+      - 瑞士3 | ⬇️ 2.9MB/s
+      - 瑞士4 | ⬇️ 3.3MB/s
+      - 英国4 | ⬇️ 2.4MB/s
+      - 日本1 | ⬇️ 2.6MB/s
+      - 美国9 | ⬇️ 4.2MB/s
+      - 美国10 | ⬇️ 4.9MB/s
+      - 美国11 | ⬇️ 2.8MB/s
+      - 美国12 | ⬇️ 3.4MB/s
+      - 香港2 | ⬇️ 1.2MB/s
+      - 新加坡2 | ⬇️ 1.7MB/s
+      - 美国13 | ⬇️ 1.8MB/s
+      - 法国1 | ⬇️ 2.3MB/s
+      - 美国14 | ⬇️ 2.2MB/s
+      - 香港3 | ⬇️ 3.1MB/s
+      - 美国15 | ⬇️ 2.5MB/s
+      - 美国16 | ⬇️ 1.4MB/s
+      - 美国17 | ⬇️ 4.4MB/s
+      - 美国18 | ⬇️ 2.3MB/s
+      - 法国2 | ⬇️ 4.1MB/s
+      - 香港4 | ⬇️ 1.1MB/s
+      - 美国19 | ⬇️ 2.1MB/s
+      - 美国20 | ⬇️ 1.8MB/s
+      - 美国21 | ⬇️ 2.2MB/s
+      - 美国23 | ⬇️ 1.4MB/s
+      - 香港5 | ⬇️ 3.3MB/s
+      - 阿拉伯酋长国1 | ⬇️ 1.1MB/s
+      - 美国24 | ⬇️ 3.4MB/s
+      - 美国25 | ⬇️ 4.3MB/s
+      - 美国26 | ⬇️ 3.2MB/s
+      - 美国27 | ⬇️ 1.4MB/s
+      - 香港6 | ⬇️ 1.3MB/s
+      - 美国28 | ⬇️ 1.2MB/s
+      - 香港7 | ⬇️ 4.9MB/s
+      - 美国30 | ⬇️ 1.7MB/s
+      - 日本3 | ⬇️ 2.3MB/s
+      - 美国31 | ⬇️ 1.8MB/s
+      - 美国32 | ⬇️ 1.2MB/s
+      - 美国33 | ⬇️ 2.4MB/s
+      - 日本4 | ⬇️ 1.4MB/s
+      - 美国48 | ⬇️ 1.9MB/s
+      - 美国52 | ⬇️ 3.5MB/s
+      - 美国55 | ⬇️ 1.2MB/s
+      - 英国6 | ⬇️ 3.2MB/s
+      - 英国8 | ⬇️ 3.5MB/s
+      - 美国58 | ⬇️ 1.5MB/s
+      - 美国60 | ⬇️ 3.5MB/s
+      - 美国61 | ⬇️ 2.7MB/s
+      - 美国64 | ⬇️ 1.1MB/s
+      - 英国9 | ⬇️ 4.0MB/s
+      - 英国10 | ⬇️ 2.1MB/s
+      - 英国11 | ⬇️ 3.7MB/s
+      - 英国12 | ⬇️ 2.4MB/s
+      - 日本7 | ⬇️ 2.6MB/s
+      - 英国13 | ⬇️ 3.6MB/s
+      - 美国67 | ⬇️ 4.7MB/s
+      - 英国14 | ⬇️ 4.3MB/s
+      - 美国68 | ⬇️ 4.7MB/s
+      - 英国15 | ⬇️ 2.5MB/s
+      - 美国71 | ⬇️ 1.6MB/s
+      - 美国72 | ⬇️ 3.8MB/s
+      - 英国16 | ⬇️ 3.2MB/s
+      - 美国77 | ⬇️ 4.9MB/s
+      - 日本9 | ⬇️ 1.1MB/s
+      - 美国84 | ⬇️ 2.5MB/s
+      - 法国3 | ⬇️ 3.1MB/s
+      - 英国17 | ⬇️ 3.4MB/s
+      - 加拿大3 | ⬇️ 3.4MB/s
+      - 美国89 | ⬇️ 2.7MB/s
+      - 英国18 | ⬇️ 3.0MB/s
+      - 美国96 | ⬇️ 4.1MB/s
+      - 法国4 | ⬇️ 4.0MB/s
+      - 印度1 | ⬇️ 4.0MB/s
+      - 美国104 | ⬇️ 3.3MB/s
+      - 英国19 | ⬇️ 3.4MB/s
+      - 英国20 | ⬇️ 4.0MB/s
+      - 美国113 | ⬇️ 3.1MB/s
+      - 日本13 | ⬇️ 2.7MB/s
+      - 芬兰7 | ⬇️ 2.7MB/s
+      - 美国120 | ⬇️ 4.3MB/s
+      - 英国21 | ⬇️ 5.0MB/s
+      - 英国22 | ⬇️ 4.0MB/s
+      - 美国123 | ⬇️ 3.8MB/s
+      - 英国24 | ⬇️ 4.5MB/s
+      - 新加坡4 | ⬇️ 4.1MB/s
+      - 英国25 | ⬇️ 3.9MB/s
+      - 英国26 | ⬇️ 4.0MB/s
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - KR>加拿大 多伦多
-      - cloud2-4
-      - HK akile zz1
-      - jp zz
-      - BR dci
+      - 台湾1 | ⬇️ 1.4MB/s
+      - 台湾2 | ⬇️ 3.1MB/s
+      - 台湾4 | ⬇️ 2.6MB/s
+      - 台湾5 | ⬇️ 1.4MB/s
+      - 台湾6 | ⬇️ 2.7MB/s
+      - 台湾7 | ⬇️ 1.1MB/s
+      - 其他1-未识别 | ⬇️ 1.3MB/s
+      - 台湾8 | ⬇️ 3.2MB/s
+      - 新加坡1 | ⬇️ 2.1MB/s
+      - 美国1 | ⬇️ 3.7MB/s
+      - 台湾9 | ⬇️ 3.7MB/s
+      - 英国1 | ⬇️ 4.1MB/s
+      - 美国2 | ⬇️ 1.6MB/s
+      - 美国3 | ⬇️ 2.2MB/s
+      - 美国4 | ⬇️ 2.2MB/s
+      - 美国5 | ⬇️ 1.0MB/s
+      - 美国6 | ⬇️ 2.4MB/s
+      - 美国7 | ⬇️ 1.8MB/s
+      - 荷兰1 | ⬇️ 2.4MB/s
+      - 美国8 | ⬇️ 4.8MB/s
+      - 英国2 | ⬇️ 1.4MB/s
+      - 英国3 | ⬇️ 2.1MB/s
+      - 瑞士1 | ⬇️ 1.5MB/s
+      - 瑞士2 | ⬇️ 1.9MB/s
+      - 瑞士3 | ⬇️ 2.9MB/s
+      - 瑞士4 | ⬇️ 3.3MB/s
+      - 英国4 | ⬇️ 2.4MB/s
+      - 日本1 | ⬇️ 2.6MB/s
+      - 美国9 | ⬇️ 4.2MB/s
+      - 美国10 | ⬇️ 4.9MB/s
+      - 美国11 | ⬇️ 2.8MB/s
+      - 美国12 | ⬇️ 3.4MB/s
+      - 香港2 | ⬇️ 1.2MB/s
+      - 新加坡2 | ⬇️ 1.7MB/s
+      - 美国13 | ⬇️ 1.8MB/s
+      - 法国1 | ⬇️ 2.3MB/s
+      - 美国14 | ⬇️ 2.2MB/s
+      - 香港3 | ⬇️ 3.1MB/s
+      - 美国15 | ⬇️ 2.5MB/s
+      - 美国16 | ⬇️ 1.4MB/s
+      - 美国17 | ⬇️ 4.4MB/s
+      - 美国18 | ⬇️ 2.3MB/s
+      - 法国2 | ⬇️ 4.1MB/s
+      - 香港4 | ⬇️ 1.1MB/s
+      - 美国19 | ⬇️ 2.1MB/s
+      - 美国20 | ⬇️ 1.8MB/s
+      - 美国21 | ⬇️ 2.2MB/s
+      - 美国23 | ⬇️ 1.4MB/s
+      - 香港5 | ⬇️ 3.3MB/s
+      - 阿拉伯酋长国1 | ⬇️ 1.1MB/s
+      - 美国24 | ⬇️ 3.4MB/s
+      - 美国25 | ⬇️ 4.3MB/s
+      - 美国26 | ⬇️ 3.2MB/s
+      - 美国27 | ⬇️ 1.4MB/s
+      - 香港6 | ⬇️ 1.3MB/s
+      - 美国28 | ⬇️ 1.2MB/s
+      - 香港7 | ⬇️ 4.9MB/s
+      - 美国30 | ⬇️ 1.7MB/s
+      - 日本3 | ⬇️ 2.3MB/s
+      - 美国31 | ⬇️ 1.8MB/s
+      - 美国32 | ⬇️ 1.2MB/s
+      - 美国33 | ⬇️ 2.4MB/s
+      - 日本4 | ⬇️ 1.4MB/s
+      - 美国48 | ⬇️ 1.9MB/s
+      - 美国52 | ⬇️ 3.5MB/s
+      - 美国55 | ⬇️ 1.2MB/s
+      - 英国6 | ⬇️ 3.2MB/s
+      - 英国8 | ⬇️ 3.5MB/s
+      - 美国58 | ⬇️ 1.5MB/s
+      - 美国60 | ⬇️ 3.5MB/s
+      - 美国61 | ⬇️ 2.7MB/s
+      - 美国64 | ⬇️ 1.1MB/s
+      - 英国9 | ⬇️ 4.0MB/s
+      - 英国10 | ⬇️ 2.1MB/s
+      - 英国11 | ⬇️ 3.7MB/s
+      - 英国12 | ⬇️ 2.4MB/s
+      - 日本7 | ⬇️ 2.6MB/s
+      - 英国13 | ⬇️ 3.6MB/s
+      - 美国67 | ⬇️ 4.7MB/s
+      - 英国14 | ⬇️ 4.3MB/s
+      - 美国68 | ⬇️ 4.7MB/s
+      - 英国15 | ⬇️ 2.5MB/s
+      - 美国71 | ⬇️ 1.6MB/s
+      - 美国72 | ⬇️ 3.8MB/s
+      - 英国16 | ⬇️ 3.2MB/s
+      - 美国77 | ⬇️ 4.9MB/s
+      - 日本9 | ⬇️ 1.1MB/s
+      - 美国84 | ⬇️ 2.5MB/s
+      - 法国3 | ⬇️ 3.1MB/s
+      - 英国17 | ⬇️ 3.4MB/s
+      - 加拿大3 | ⬇️ 3.4MB/s
+      - 美国89 | ⬇️ 2.7MB/s
+      - 英国18 | ⬇️ 3.0MB/s
+      - 美国96 | ⬇️ 4.1MB/s
+      - 法国4 | ⬇️ 4.0MB/s
+      - 印度1 | ⬇️ 4.0MB/s
+      - 美国104 | ⬇️ 3.3MB/s
+      - 英国19 | ⬇️ 3.4MB/s
+      - 英国20 | ⬇️ 4.0MB/s
+      - 美国113 | ⬇️ 3.1MB/s
+      - 日本13 | ⬇️ 2.7MB/s
+      - 芬兰7 | ⬇️ 2.7MB/s
+      - 美国120 | ⬇️ 4.3MB/s
+      - 英国21 | ⬇️ 5.0MB/s
+      - 英国22 | ⬇️ 4.0MB/s
+      - 美国123 | ⬇️ 3.8MB/s
+      - 英国24 | ⬇️ 4.5MB/s
+      - 新加坡4 | ⬇️ 4.1MB/s
+      - 英国25 | ⬇️ 3.9MB/s
+      - 英国26 | ⬇️ 4.0MB/s
   - name: 📢 谷歌FCM
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - KR>加拿大 多伦多
-      - cloud2-4
-      - HK akile zz1
-      - jp zz
-      - BR dci
+      - 台湾1 | ⬇️ 1.4MB/s
+      - 台湾2 | ⬇️ 3.1MB/s
+      - 台湾4 | ⬇️ 2.6MB/s
+      - 台湾5 | ⬇️ 1.4MB/s
+      - 台湾6 | ⬇️ 2.7MB/s
+      - 台湾7 | ⬇️ 1.1MB/s
+      - 其他1-未识别 | ⬇️ 1.3MB/s
+      - 台湾8 | ⬇️ 3.2MB/s
+      - 新加坡1 | ⬇️ 2.1MB/s
+      - 美国1 | ⬇️ 3.7MB/s
+      - 台湾9 | ⬇️ 3.7MB/s
+      - 英国1 | ⬇️ 4.1MB/s
+      - 美国2 | ⬇️ 1.6MB/s
+      - 美国3 | ⬇️ 2.2MB/s
+      - 美国4 | ⬇️ 2.2MB/s
+      - 美国5 | ⬇️ 1.0MB/s
+      - 美国6 | ⬇️ 2.4MB/s
+      - 美国7 | ⬇️ 1.8MB/s
+      - 荷兰1 | ⬇️ 2.4MB/s
+      - 美国8 | ⬇️ 4.8MB/s
+      - 英国2 | ⬇️ 1.4MB/s
+      - 英国3 | ⬇️ 2.1MB/s
+      - 瑞士1 | ⬇️ 1.5MB/s
+      - 瑞士2 | ⬇️ 1.9MB/s
+      - 瑞士3 | ⬇️ 2.9MB/s
+      - 瑞士4 | ⬇️ 3.3MB/s
+      - 英国4 | ⬇️ 2.4MB/s
+      - 日本1 | ⬇️ 2.6MB/s
+      - 美国9 | ⬇️ 4.2MB/s
+      - 美国10 | ⬇️ 4.9MB/s
+      - 美国11 | ⬇️ 2.8MB/s
+      - 美国12 | ⬇️ 3.4MB/s
+      - 香港2 | ⬇️ 1.2MB/s
+      - 新加坡2 | ⬇️ 1.7MB/s
+      - 美国13 | ⬇️ 1.8MB/s
+      - 法国1 | ⬇️ 2.3MB/s
+      - 美国14 | ⬇️ 2.2MB/s
+      - 香港3 | ⬇️ 3.1MB/s
+      - 美国15 | ⬇️ 2.5MB/s
+      - 美国16 | ⬇️ 1.4MB/s
+      - 美国17 | ⬇️ 4.4MB/s
+      - 美国18 | ⬇️ 2.3MB/s
+      - 法国2 | ⬇️ 4.1MB/s
+      - 香港4 | ⬇️ 1.1MB/s
+      - 美国19 | ⬇️ 2.1MB/s
+      - 美国20 | ⬇️ 1.8MB/s
+      - 美国21 | ⬇️ 2.2MB/s
+      - 美国23 | ⬇️ 1.4MB/s
+      - 香港5 | ⬇️ 3.3MB/s
+      - 阿拉伯酋长国1 | ⬇️ 1.1MB/s
+      - 美国24 | ⬇️ 3.4MB/s
+      - 美国25 | ⬇️ 4.3MB/s
+      - 美国26 | ⬇️ 3.2MB/s
+      - 美国27 | ⬇️ 1.4MB/s
+      - 香港6 | ⬇️ 1.3MB/s
+      - 美国28 | ⬇️ 1.2MB/s
+      - 香港7 | ⬇️ 4.9MB/s
+      - 美国30 | ⬇️ 1.7MB/s
+      - 日本3 | ⬇️ 2.3MB/s
+      - 美国31 | ⬇️ 1.8MB/s
+      - 美国32 | ⬇️ 1.2MB/s
+      - 美国33 | ⬇️ 2.4MB/s
+      - 日本4 | ⬇️ 1.4MB/s
+      - 美国48 | ⬇️ 1.9MB/s
+      - 美国52 | ⬇️ 3.5MB/s
+      - 美国55 | ⬇️ 1.2MB/s
+      - 英国6 | ⬇️ 3.2MB/s
+      - 英国8 | ⬇️ 3.5MB/s
+      - 美国58 | ⬇️ 1.5MB/s
+      - 美国60 | ⬇️ 3.5MB/s
+      - 美国61 | ⬇️ 2.7MB/s
+      - 美国64 | ⬇️ 1.1MB/s
+      - 英国9 | ⬇️ 4.0MB/s
+      - 英国10 | ⬇️ 2.1MB/s
+      - 英国11 | ⬇️ 3.7MB/s
+      - 英国12 | ⬇️ 2.4MB/s
+      - 日本7 | ⬇️ 2.6MB/s
+      - 英国13 | ⬇️ 3.6MB/s
+      - 美国67 | ⬇️ 4.7MB/s
+      - 英国14 | ⬇️ 4.3MB/s
+      - 美国68 | ⬇️ 4.7MB/s
+      - 英国15 | ⬇️ 2.5MB/s
+      - 美国71 | ⬇️ 1.6MB/s
+      - 美国72 | ⬇️ 3.8MB/s
+      - 英国16 | ⬇️ 3.2MB/s
+      - 美国77 | ⬇️ 4.9MB/s
+      - 日本9 | ⬇️ 1.1MB/s
+      - 美国84 | ⬇️ 2.5MB/s
+      - 法国3 | ⬇️ 3.1MB/s
+      - 英国17 | ⬇️ 3.4MB/s
+      - 加拿大3 | ⬇️ 3.4MB/s
+      - 美国89 | ⬇️ 2.7MB/s
+      - 英国18 | ⬇️ 3.0MB/s
+      - 美国96 | ⬇️ 4.1MB/s
+      - 法国4 | ⬇️ 4.0MB/s
+      - 印度1 | ⬇️ 4.0MB/s
+      - 美国104 | ⬇️ 3.3MB/s
+      - 英国19 | ⬇️ 3.4MB/s
+      - 英国20 | ⬇️ 4.0MB/s
+      - 美国113 | ⬇️ 3.1MB/s
+      - 日本13 | ⬇️ 2.7MB/s
+      - 芬兰7 | ⬇️ 2.7MB/s
+      - 美国120 | ⬇️ 4.3MB/s
+      - 英国21 | ⬇️ 5.0MB/s
+      - 英国22 | ⬇️ 4.0MB/s
+      - 美国123 | ⬇️ 3.8MB/s
+      - 英国24 | ⬇️ 4.5MB/s
+      - 新加坡4 | ⬇️ 4.1MB/s
+      - 英国25 | ⬇️ 3.9MB/s
+      - 英国26 | ⬇️ 4.0MB/s
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -106,11 +946,116 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - KR>加拿大 多伦多
-      - cloud2-4
-      - HK akile zz1
-      - jp zz
-      - BR dci
+      - 台湾1 | ⬇️ 1.4MB/s
+      - 台湾2 | ⬇️ 3.1MB/s
+      - 台湾4 | ⬇️ 2.6MB/s
+      - 台湾5 | ⬇️ 1.4MB/s
+      - 台湾6 | ⬇️ 2.7MB/s
+      - 台湾7 | ⬇️ 1.1MB/s
+      - 其他1-未识别 | ⬇️ 1.3MB/s
+      - 台湾8 | ⬇️ 3.2MB/s
+      - 新加坡1 | ⬇️ 2.1MB/s
+      - 美国1 | ⬇️ 3.7MB/s
+      - 台湾9 | ⬇️ 3.7MB/s
+      - 英国1 | ⬇️ 4.1MB/s
+      - 美国2 | ⬇️ 1.6MB/s
+      - 美国3 | ⬇️ 2.2MB/s
+      - 美国4 | ⬇️ 2.2MB/s
+      - 美国5 | ⬇️ 1.0MB/s
+      - 美国6 | ⬇️ 2.4MB/s
+      - 美国7 | ⬇️ 1.8MB/s
+      - 荷兰1 | ⬇️ 2.4MB/s
+      - 美国8 | ⬇️ 4.8MB/s
+      - 英国2 | ⬇️ 1.4MB/s
+      - 英国3 | ⬇️ 2.1MB/s
+      - 瑞士1 | ⬇️ 1.5MB/s
+      - 瑞士2 | ⬇️ 1.9MB/s
+      - 瑞士3 | ⬇️ 2.9MB/s
+      - 瑞士4 | ⬇️ 3.3MB/s
+      - 英国4 | ⬇️ 2.4MB/s
+      - 日本1 | ⬇️ 2.6MB/s
+      - 美国9 | ⬇️ 4.2MB/s
+      - 美国10 | ⬇️ 4.9MB/s
+      - 美国11 | ⬇️ 2.8MB/s
+      - 美国12 | ⬇️ 3.4MB/s
+      - 香港2 | ⬇️ 1.2MB/s
+      - 新加坡2 | ⬇️ 1.7MB/s
+      - 美国13 | ⬇️ 1.8MB/s
+      - 法国1 | ⬇️ 2.3MB/s
+      - 美国14 | ⬇️ 2.2MB/s
+      - 香港3 | ⬇️ 3.1MB/s
+      - 美国15 | ⬇️ 2.5MB/s
+      - 美国16 | ⬇️ 1.4MB/s
+      - 美国17 | ⬇️ 4.4MB/s
+      - 美国18 | ⬇️ 2.3MB/s
+      - 法国2 | ⬇️ 4.1MB/s
+      - 香港4 | ⬇️ 1.1MB/s
+      - 美国19 | ⬇️ 2.1MB/s
+      - 美国20 | ⬇️ 1.8MB/s
+      - 美国21 | ⬇️ 2.2MB/s
+      - 美国23 | ⬇️ 1.4MB/s
+      - 香港5 | ⬇️ 3.3MB/s
+      - 阿拉伯酋长国1 | ⬇️ 1.1MB/s
+      - 美国24 | ⬇️ 3.4MB/s
+      - 美国25 | ⬇️ 4.3MB/s
+      - 美国26 | ⬇️ 3.2MB/s
+      - 美国27 | ⬇️ 1.4MB/s
+      - 香港6 | ⬇️ 1.3MB/s
+      - 美国28 | ⬇️ 1.2MB/s
+      - 香港7 | ⬇️ 4.9MB/s
+      - 美国30 | ⬇️ 1.7MB/s
+      - 日本3 | ⬇️ 2.3MB/s
+      - 美国31 | ⬇️ 1.8MB/s
+      - 美国32 | ⬇️ 1.2MB/s
+      - 美国33 | ⬇️ 2.4MB/s
+      - 日本4 | ⬇️ 1.4MB/s
+      - 美国48 | ⬇️ 1.9MB/s
+      - 美国52 | ⬇️ 3.5MB/s
+      - 美国55 | ⬇️ 1.2MB/s
+      - 英国6 | ⬇️ 3.2MB/s
+      - 英国8 | ⬇️ 3.5MB/s
+      - 美国58 | ⬇️ 1.5MB/s
+      - 美国60 | ⬇️ 3.5MB/s
+      - 美国61 | ⬇️ 2.7MB/s
+      - 美国64 | ⬇️ 1.1MB/s
+      - 英国9 | ⬇️ 4.0MB/s
+      - 英国10 | ⬇️ 2.1MB/s
+      - 英国11 | ⬇️ 3.7MB/s
+      - 英国12 | ⬇️ 2.4MB/s
+      - 日本7 | ⬇️ 2.6MB/s
+      - 英国13 | ⬇️ 3.6MB/s
+      - 美国67 | ⬇️ 4.7MB/s
+      - 英国14 | ⬇️ 4.3MB/s
+      - 美国68 | ⬇️ 4.7MB/s
+      - 英国15 | ⬇️ 2.5MB/s
+      - 美国71 | ⬇️ 1.6MB/s
+      - 美国72 | ⬇️ 3.8MB/s
+      - 英国16 | ⬇️ 3.2MB/s
+      - 美国77 | ⬇️ 4.9MB/s
+      - 日本9 | ⬇️ 1.1MB/s
+      - 美国84 | ⬇️ 2.5MB/s
+      - 法国3 | ⬇️ 3.1MB/s
+      - 英国17 | ⬇️ 3.4MB/s
+      - 加拿大3 | ⬇️ 3.4MB/s
+      - 美国89 | ⬇️ 2.7MB/s
+      - 英国18 | ⬇️ 3.0MB/s
+      - 美国96 | ⬇️ 4.1MB/s
+      - 法国4 | ⬇️ 4.0MB/s
+      - 印度1 | ⬇️ 4.0MB/s
+      - 美国104 | ⬇️ 3.3MB/s
+      - 英国19 | ⬇️ 3.4MB/s
+      - 英国20 | ⬇️ 4.0MB/s
+      - 美国113 | ⬇️ 3.1MB/s
+      - 日本13 | ⬇️ 2.7MB/s
+      - 芬兰7 | ⬇️ 2.7MB/s
+      - 美国120 | ⬇️ 4.3MB/s
+      - 英国21 | ⬇️ 5.0MB/s
+      - 英国22 | ⬇️ 4.0MB/s
+      - 美国123 | ⬇️ 3.8MB/s
+      - 英国24 | ⬇️ 4.5MB/s
+      - 新加坡4 | ⬇️ 4.1MB/s
+      - 英国25 | ⬇️ 3.9MB/s
+      - 英国26 | ⬇️ 4.0MB/s
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
