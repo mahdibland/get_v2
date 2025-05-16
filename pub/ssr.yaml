@@ -67,21 +67,21 @@ proxy-groups:
       - DIRECT
       - REJECT
 rules:
+  - RULE-SET,cn_ip,国内
+  - RULE-SET,netflix_ip,NETFLIX
+  - RULE-SET,twitter_ip,Twitter
+  - RULE-SET,google_domain,Google
+  - RULE-SET,bahamut_domain,巴哈姆特
+  - RULE-SET,twitter_domain,Twitter
+  - RULE-SET,youtube_domain,YouTube
   - RULE-SET,cn_domain,国内
   - RULE-SET,telegram_ip,Telegram
-  - RULE-SET,cn_ip,国内
-  - RULE-SET,google_domain,Google
-  - RULE-SET,google_ip,Google
-  - RULE-SET,netflix_ip,NETFLIX
-  - RULE-SET,telegram_domain,Telegram
-  - RULE-SET,spotify_domain,Spotify
-  - RULE-SET,twitter_ip,Twitter
-  - MATCH,其他
-  - RULE-SET,geolocation-!cn,其他
-  - RULE-SET,twitter_domain,Twitter
-  - RULE-SET,netflix_domain,NETFLIX
-  - RULE-SET,bilibili_domain,哔哩哔哩
-  - RULE-SET,youtube_domain,YouTube
   - RULE-SET,private_ip,直连,no-resolve
-  - RULE-SET,bahamut_domain,巴哈姆特
+  - RULE-SET,spotify_domain,Spotify
+  - MATCH,其他
+  - RULE-SET,telegram_domain,Telegram
+  - RULE-SET,geolocation-!cn,其他
+  - RULE-SET,bilibili_domain,哔哩哔哩
+  - RULE-SET,google_ip,Google
+  - RULE-SET,netflix_domain,NETFLIX
   - RULE-SET,github_domain,Github
