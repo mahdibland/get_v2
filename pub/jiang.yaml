@@ -5,7 +5,6 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: 台湾1 | ⬇️ 1.4MB/s, server: pranab.ns.cloudflare.com, port: 443, type: trojan, password: Aimer, sni: epcca.ambercc.filegear-sg.me, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560&proxyip=ts.hpc.tw", headers: {Host: epcca.ambercc.filegear-sg.me}}}
   - {name: 台湾2 | ⬇️ 3.1MB/s, server: thaddeus.ns.cloudflare.com, port: 443, type: trojan, password: Aimer, sni: epcca.ambercc.filegear-sg.me, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560&proxyip=ts.hpc.tw", headers: {Host: epcca.ambercc.filegear-sg.me}}}
   - {name: 台湾4 | ⬇️ 2.6MB/s, server: 108.165.152.113, port: 443, type: trojan, password: Aimer, sni: epcca.ambercc.filegear-sg.me, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560&proxyip=ts.hpc.tw", headers: {Host: epcca.ambercc.filegear-sg.me}}}
   - {name: 台湾5 | ⬇️ 1.4MB/s, server: 27.50.49.136, port: 443, type: trojan, password: Aimer, sni: epcca.ambercc.filegear-sg.me, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560&proxyip=ts.hpc.tw", headers: {Host: epcca.ambercc.filegear-sg.me}}}
@@ -121,7 +120,6 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 台湾1 | ⬇️ 1.4MB/s
       - 台湾2 | ⬇️ 3.1MB/s
       - 台湾4 | ⬇️ 2.6MB/s
       - 台湾5 | ⬇️ 1.4MB/s
@@ -237,7 +235,6 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - 台湾1 | ⬇️ 1.4MB/s
       - 台湾2 | ⬇️ 3.1MB/s
       - 台湾4 | ⬇️ 2.6MB/s
       - 台湾5 | ⬇️ 1.4MB/s
@@ -353,7 +350,6 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 台湾1 | ⬇️ 1.4MB/s
       - 台湾2 | ⬇️ 3.1MB/s
       - 台湾4 | ⬇️ 2.6MB/s
       - 台湾5 | ⬇️ 1.4MB/s
@@ -468,7 +464,6 @@ proxy-groups:
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 台湾1 | ⬇️ 1.4MB/s
       - 台湾2 | ⬇️ 3.1MB/s
       - 台湾4 | ⬇️ 2.6MB/s
       - 台湾5 | ⬇️ 1.4MB/s
@@ -583,7 +578,6 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 台湾1 | ⬇️ 1.4MB/s
       - 台湾2 | ⬇️ 3.1MB/s
       - 台湾4 | ⬇️ 2.6MB/s
       - 台湾5 | ⬇️ 1.4MB/s
@@ -698,7 +692,6 @@ proxy-groups:
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 台湾1 | ⬇️ 1.4MB/s
       - 台湾2 | ⬇️ 3.1MB/s
       - 台湾4 | ⬇️ 2.6MB/s
       - 台湾5 | ⬇️ 1.4MB/s
@@ -814,7 +807,6 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 台湾1 | ⬇️ 1.4MB/s
       - 台湾2 | ⬇️ 3.1MB/s
       - 台湾4 | ⬇️ 2.6MB/s
       - 台湾5 | ⬇️ 1.4MB/s
@@ -946,7 +938,6 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 台湾1 | ⬇️ 1.4MB/s
       - 台湾2 | ⬇️ 3.1MB/s
       - 台湾4 | ⬇️ 2.6MB/s
       - 台湾5 | ⬇️ 1.4MB/s
