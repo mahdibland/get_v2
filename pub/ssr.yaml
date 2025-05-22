@@ -6,82 +6,51 @@ log-level: info
 external-controller: 0.0.0.0:9090
 proxies: []
 proxy-groups:
-  - name: 默认
+  - name: 🔰 节点选择
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - 🎯 全球直连
+  - name: ♻️ 自动选择
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    proxies: []
+  - name: 🌍 国外媒体
+    type: select
+    proxies:
+      - 🔰 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+  - name: 🌏 国内媒体
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🔰 节点选择
+  - name: 📲 电报信息
+    type: select
+    proxies:
+      - 🔰 节点选择
+      - 🎯 全球直连
+  - name: 🍎 苹果服务
+    type: select
+    proxies:
+      - 🔰 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+  - name: 🎯 全球直连
     type: select
     proxies:
       - DIRECT
-      - REJECT
-  - name: Google
+  - name: 🛑 全球拦截
     type: select
     proxies:
-      - DIRECT
       - REJECT
-  - name: Telegram
+      - DIRECT
+  - name: 🐟 漏网之鱼
     type: select
     proxies:
-      - DIRECT
-      - REJECT
-  - name: Twitter
-    type: select
-    proxies:
-      - DIRECT
-      - REJECT
-  - name: 哔哩哔哩
-    type: select
-    proxies:
-      - DIRECT
-      - REJECT
-  - name: 巴哈姆特
-    type: select
-    proxies:
-      - DIRECT
-      - REJECT
-  - name: YouTube
-    type: select
-    proxies:
-      - DIRECT
-      - REJECT
-  - name: NETFLIX
-    type: select
-    proxies:
-      - DIRECT
-      - REJECT
-  - name: Spotify
-    type: select
-    proxies:
-      - DIRECT
-      - REJECT
-  - name: Github
-    type: select
-    proxies:
-      - DIRECT
-      - REJECT
-  - name: 国内
-    type: select
-    proxies:
-      - DIRECT
-      - REJECT
-  - name: 其他
-    type: select
-    proxies:
-      - DIRECT
-      - REJECT
-rules:
-  - RULE-SET,cn_ip,国内
-  - RULE-SET,bilibili_domain,哔哩哔哩
-  - RULE-SET,google_ip,Google
-  - RULE-SET,google_domain,Google
-  - RULE-SET,geolocation-!cn,其他
-  - RULE-SET,cn_domain,国内
-  - RULE-SET,telegram_domain,Telegram
-  - RULE-SET,telegram_ip,Telegram
-  - RULE-SET,netflix_ip,NETFLIX
-  - RULE-SET,netflix_domain,NETFLIX
-  - RULE-SET,github_domain,Github
-  - RULE-SET,bahamut_domain,巴哈姆特
-  - RULE-SET,twitter_domain,Twitter
-  - RULE-SET,twitter_ip,Twitter
-  - MATCH,其他
-  - RULE-SET,youtube_domain,YouTube
-  - RULE-SET,spotify_domain,Spotify
-  - RULE-SET,private_ip,直连,no-resolve
+      - 🔰 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+rules: []
