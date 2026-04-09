@@ -5,333 +5,141 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: DE_1|2.1MB/s|YT-DE|NF|D+|9%, server: 94.159.98.123, port: 443, type: ss, cipher: none, password: 14b02e2a-8930-4afb-8412-ea4a4954ca5b, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: "", path: "", tls: true, mux: true}}
-  - {name: FR_1|3.7MB/s|GPT⁺|YT-FR|NF|24%, server: mn.qwer-cn.org, port: 10913, type: ss, cipher: aes-128-gcm, password: c1e93142-d092-4bc6-8723-0352ae6b1d74}
-  - {name: HK_1|7.4MB/s|GPT⁺|YT-HK|NF|D+|GM|15%, server: 110.42.98.230, port: 60111, type: ss, cipher: chacha20-ietf-poly1305, password: somebody, plugin: obfs, plugin-opts: {mode: http, host: 20xteamxa9-hka3-a7xr.update.microsoft.com}}
-  - {name: HK_2|10.9MB/s|GPT|YT-HK|NF|D+|GM, server: 8.138.251.145, port: 33011, type: ss, cipher: chacha20-ietf-poly1305, password: somebody, plugin: obfs, plugin-opts: {mode: http, host: 20xteamxa9-hkg5-a7xr.update.microsoft.com}}
-  - {name: HK_3|4.4MB/s|YT-CN|NF|D+|1%, server: 3.112.150.142, port: 21413, type: trojan, password: 187dda4498be9ac4f28db939d5940185, sni: www.nintendogames.net, skip-cert-verify: true}
-  - {name: HK_4|3.6MB/s|YT-CN|D+|1%, server: 3.112.150.142, port: 21413, type: trojan, password: 187dda4498be9ac4f28db939d5940185, sni: www.nintendogames.net, skip-cert-verify: true}
-  - {name: HK_5|3.7MB/s|YT-CN|NF|D+|1%, server: 13.113.190.211, port: 9211, type: trojan, password: BxceQaOe, sni: t.me%252Fripaojiedian, skip-cert-verify: true}
-  - {name: JP_11|2.5MB/s|GPT⁺|YT-JP|NF|2%, server: 52.192.18.255, port: 2001, type: trojan, password: 187dda4498be9ac4f28db939d5940185, sni: www.nintendogames.net, skip-cert-verify: true}
-  - {name: JP_12|2.5MB/s|GPT⁺|YT-JP|NF|2%, server: 3.113.10.3, port: 3122, type: trojan, password: BxceQaOe, sni: t.me%25252Fripaojiedian, skip-cert-verify: true}
-  - {name: JP_14|2.8MB/s|YT-JP|NF|D+|GM, server: 217.142.250.195, port: 587, type: trojan, password: trojan, sni: jflsjlaf.pages.dev, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: jflsjlaf.pages.dev}}}
-  - {name: JP_1|7.9MB/s|GPT⁺|YT-JP|NF|GM|0%, server: vpn-jp-001.fastervpn.world, port: 443, type: hysteria2, ports: 443, password: qQe1z5kU8kN6SlKnDt9Ru3Qp, sni: vpn-jp-001.fastervpn.world, skip-cert-verify: true}
+  - {name: HK_1|2.5MB/s|GPT⁺|YT-HK|NF|D+|GM|15%, server: 103.219.194.220, port: 30011, type: ss, cipher: chacha20-ietf-poly1305, password: somebody, plugin: obfs, plugin-opts: {mode: http, host: 20xteamxa9-hkg2-a7xr.update.microsoft.com}}
+  - {name: JP_1|4.1MB/s|GPT⁺|YT-JP|NF|GM|0%, server: vpn-jp-018.fastervpn.world, port: 443, type: hysteria2, ports: 443, password: qQe1z5kU8kN6SlKnDt9Ru3Qp, sni: vpn-jp-018.fastervpn.world, skip-cert-verify: true}
   - {name: JP_2|5.0MB/s|GPT⁺|YT-JP|NF|D+|GM|3%, server: vpn-jp-006.fastervpn.world, port: 443, type: hysteria2, ports: 443, password: qQe1z5kU8kN6SlKnDt9Ru3Qp, sni: vpn-jp-006.fastervpn.world, skip-cert-verify: true}
-  - {name: JP_3|3.3MB/s|GPT⁺|YT-CN|NF|D+|0%, server: vpn-jp-013.fastervpn.world, port: 443, type: hysteria2, ports: 443, password: qQe1z5kU8kN6SlKnDt9Ru3Qp, sni: vpn-jp-013.fastervpn.world, skip-cert-verify: true}
-  - {name: JP_5|4.3MB/s|GPT⁺|YT-JP|NF|GM|3%, server: vpn-jp-007.fastervpn.world, port: 443, type: hysteria2, ports: 443, password: qQe1z5kU8kN6SlKnDt9Ru3Qp, sni: vpn-jp-007.fastervpn.world, skip-cert-verify: true}
-  - {name: JP_7|3.5MB/s|GPT⁺|YT-JP|NF|GM|2%, server: 3.113.10.3, port: 3122, type: trojan, password: BxceQaOe, sni: t.me%25252Fripaojiedian, skip-cert-verify: true}
-  - {name: JP_8|2.7MB/s|GPT⁺|YT-JP|NF|2%, server: 52.192.18.255, port: 2001, type: trojan, password: 187dda4498be9ac4f28db939d5940185, sni: www.nintendogames.net, skip-cert-verify: true}
-  - {name: JP_9|4.0MB/s|GPT⁺|YT-JP|NF|GM|2%, server: 3.113.10.3, port: 3122, type: trojan, password: BxceQaOe, sni: t.me%2Fripaojiedian, skip-cert-verify: true}
-  - {name: LU_1|2.3MB/s|GPT⁺|YT-LU|NF|52%, server: gw.lydwan.com, port: 35607, type: ss, cipher: chacha20-ietf-poly1305, password: b421832d-9964-4519-b4b3-e52a7be8b31b}
-  - {name: SG_1|5.0MB/s|GPT⁺|YT-SG|NF|GM|2%, server: vpn-sg-001.fastervpn.world, port: 443, type: hysteria2, ports: 443, password: qQe1z5kU8kN6SlKnDt9Ru3Qp, sni: vpn-sg-001.fastervpn.world, skip-cert-verify: true}
-  - {name: SG_2|4.0MB/s|GPT⁺|YT-CN|NF, server: 18.162.112.212, port: 28033, type: trojan, password: BxceQaOe, sni: t.me%25252Fripaojiedian, skip-cert-verify: true}
-  - {name: SG_3|5.2MB/s|GPT⁺|YT-CN|NF, server: 18.162.112.212, port: 28033, type: trojan, password: BxceQaOe, sni: t.me%2Fripaojiedian, skip-cert-verify: true}
-  - {name: SG_4|3.4MB/s|GPT⁺|YT-SG|NF|D+|GM|50%, server: cf.008500.xyz, port: 443, type: ss, cipher: none, password: 79960b0b-7d31-4263-8915-6511b0e137a8, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: "", path: "", tls: true, mux: true}}
-  - {name: SG_5|4.0MB/s|GPT⁺|YT-CN|NF, server: 18.162.112.212, port: 28033, type: trojan, password: BxceQaOe, sni: t.me%25252Fripaojiedian, skip-cert-verify: true}
-  - {name: TH_1|5.3MB/s|GPT⁺|YT-TH|NF|GM|17%, server: mn.qwer-cn.org, port: 10935, type: ss, cipher: aes-128-gcm, password: c1e93142-d092-4bc6-8723-0352ae6b1d74}
-  - {name: TW_1|5.3MB/s|GPT⁺|YT-TW|NF|D+|GM, server: n8mrcg005964vnc.cybervena.com, port: 50099, type: ss, cipher: chacha20-ietf-poly1305, password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4}
-  - {name: US_11|2.8MB/s|GPT⁺|YT-US|NF|GM|0%, server: usgpt.slianrk.com, port: 13012, type: ss, cipher: chacha20-ietf-poly1305, password: e777513e-9df5-4dc3-bc84-74e564345a81}
-  - {name: US_12|2.5MB/s|GPT⁺|YT-CN|NF|0%, server: 82.198.246.250, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false}
-  - {name: US_1|3.3MB/s|GPT⁺|YT-US|NF|D+|GM|10%, server: vpn-us-019.fastervpn.world, port: 443, type: hysteria2, ports: 443, password: qQe1z5kU8kN6SlKnDt9Ru3Qp, sni: vpn-us-019.fastervpn.world, skip-cert-verify: true}
-  - {name: US_2|2.3MB/s|GPT⁺|YT-US|NF|D+|GM|10%, server: vpn-us-024.fastervpn.world, port: 443, type: hysteria2, ports: 443, password: qQe1z5kU8kN6SlKnDt9Ru3Qp, sni: vpn-us-024.fastervpn.world, skip-cert-verify: true}
-  - {name: US_3|2.3MB/s|GPT⁺|YT-US|NF|D+|GM|10%, server: vpn-us-023.fastervpn.world, port: 443, type: hysteria2, ports: 443, password: qQe1z5kU8kN6SlKnDt9Ru3Qp, sni: vpn-us-023.fastervpn.world, skip-cert-verify: true}
-  - {name: US_4|2.5MB/s|GPT⁺|YT-US|NF|D+|GM|5%, server: 38.244.47.161, port: 30011, type: ss, cipher: chacha20-ietf-poly1305, password: somebody, plugin: obfs, plugin-opts: {mode: http, host: 20xteamxa9-diy02-a7xr.update.microsoft.com}}
-  - {name: US_5|2.7MB/s|GPT⁺|YT-US|NF|GM, server: 43.199.190.147, port: 49534, type: trojan, password: BxceQaOe, sni: t.me%252Fripaojiedian, skip-cert-verify: true}
-  - {name: US_6|3.2MB/s|GPT⁺|YT-US|NF|GM, server: 43.199.190.147, port: 49534, type: trojan, password: BxceQaOe, sni: t.me%252Fripaojiedian, skip-cert-verify: true}
-  - {name: US_7|2.1MB/s|GPT⁺|YT-US|NF|D+|GM|0%, server: 216.167.37.53, port: 55004, type: vmess, uuid: cd881ef5-2677-4799-9fd1-9969f9071121, alterId: 0, cipher: auto, tls: false}
-  - {name: US_8|2.8MB/s|GPT⁺|YT-US|NF|GM, server: 43.199.190.147, port: 49534, type: trojan, password: BxceQaOe, sni: t.me%2Fripaojiedian, skip-cert-verify: true}
-  - {name: US_9|2.6MB/s|YT-US|NF|D+|GM|9%, server: 125.227.233.197, port: 2053, type: ss, cipher: none, password: 14b02e2a-8930-4afb-8412-ea4a4954ca5b, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: "", path: "", tls: true, mux: true}}
+  - {name: JP_3|4.9MB/s|GPT⁺|YT-CN|NF|D+|0%, server: vpn-jp-016.fastervpn.world, port: 443, type: hysteria2, ports: 443, password: qQe1z5kU8kN6SlKnDt9Ru3Qp, sni: vpn-jp-016.fastervpn.world, skip-cert-verify: true}
+  - {name: JP_4|5.3MB/s|GPT⁺|YT-JP|NF|GM|0%, server: vpn-jp-001.fastervpn.world, port: 443, type: hysteria2, ports: 443, password: qQe1z5kU8kN6SlKnDt9Ru3Qp, sni: vpn-jp-001.fastervpn.world, skip-cert-verify: true}
+  - {name: JP_5|3.4MB/s|GPT⁺|YT-CN|NF|D+|0%, server: vpn-jp-012.fastervpn.world, port: 443, type: hysteria2, ports: 443, password: qQe1z5kU8kN6SlKnDt9Ru3Qp, sni: vpn-jp-012.fastervpn.world, skip-cert-verify: true}
+  - {name: JP_6|3.1MB/s|GPT⁺|YT-CN|NF|D+|0%, server: vpn-jp-013.fastervpn.world, port: 443, type: hysteria2, ports: 443, password: qQe1z5kU8kN6SlKnDt9Ru3Qp, sni: vpn-jp-013.fastervpn.world, skip-cert-verify: true}
+  - {name: MY_1|2.7MB/s|GPT⁺|YT-MY|NF|GM, server: 47.250.196.200, port: 43709, type: vmess, uuid: ffe039ed-d691-45cc-91ec-429b5191e6b0, alterId: 0, cipher: auto, tls: false}
+  - {name: SG_1|2.2MB/s|GPT|YT-SG|NF|D+|GM|3%, server: 85.211.192.237, port: 9600, type: trojan, password: 413fdb10-a596-4e7c-b081-54243d252894, sni: www.baidu.com, skip-cert-verify: true}
+  - {name: US_1|2.3MB/s|GPT⁺|YT-CN|NF|0%, server: 82.198.246.250, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false}
+  - {name: US_2|2.4MB/s|GPT⁺|YT-US|NF|GM|5%, server: 38.244.42.24, port: 30011, type: ss, cipher: chacha20-ietf-poly1305, password: somebody, plugin: obfs, plugin-opts: {mode: http, host: 20xteamxa9-usb2-a7xr.update.microsoft.com}}
+  - {name: US_3|2.1MB/s|GPT⁺|YT-CN|NF|D+|10%, server: vpn-us-021.fastervpn.world, port: 443, type: hysteria2, ports: 443, password: qQe1z5kU8kN6SlKnDt9Ru3Qp, sni: vpn-us-021.fastervpn.world, skip-cert-verify: true}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - DE_1|2.1MB/s|YT-DE|NF|D+|9%
-      - FR_1|3.7MB/s|GPT⁺|YT-FR|NF|24%
-      - HK_1|7.4MB/s|GPT⁺|YT-HK|NF|D+|GM|15%
-      - HK_2|10.9MB/s|GPT|YT-HK|NF|D+|GM
-      - HK_3|4.4MB/s|YT-CN|NF|D+|1%
-      - HK_4|3.6MB/s|YT-CN|D+|1%
-      - HK_5|3.7MB/s|YT-CN|NF|D+|1%
-      - JP_11|2.5MB/s|GPT⁺|YT-JP|NF|2%
-      - JP_12|2.5MB/s|GPT⁺|YT-JP|NF|2%
-      - JP_14|2.8MB/s|YT-JP|NF|D+|GM
-      - JP_1|7.9MB/s|GPT⁺|YT-JP|NF|GM|0%
+      - HK_1|2.5MB/s|GPT⁺|YT-HK|NF|D+|GM|15%
+      - JP_1|4.1MB/s|GPT⁺|YT-JP|NF|GM|0%
       - JP_2|5.0MB/s|GPT⁺|YT-JP|NF|D+|GM|3%
-      - JP_3|3.3MB/s|GPT⁺|YT-CN|NF|D+|0%
-      - JP_5|4.3MB/s|GPT⁺|YT-JP|NF|GM|3%
-      - JP_7|3.5MB/s|GPT⁺|YT-JP|NF|GM|2%
-      - JP_8|2.7MB/s|GPT⁺|YT-JP|NF|2%
-      - JP_9|4.0MB/s|GPT⁺|YT-JP|NF|GM|2%
-      - LU_1|2.3MB/s|GPT⁺|YT-LU|NF|52%
-      - SG_1|5.0MB/s|GPT⁺|YT-SG|NF|GM|2%
-      - SG_2|4.0MB/s|GPT⁺|YT-CN|NF
-      - SG_3|5.2MB/s|GPT⁺|YT-CN|NF
-      - SG_4|3.4MB/s|GPT⁺|YT-SG|NF|D+|GM|50%
-      - SG_5|4.0MB/s|GPT⁺|YT-CN|NF
-      - TH_1|5.3MB/s|GPT⁺|YT-TH|NF|GM|17%
-      - TW_1|5.3MB/s|GPT⁺|YT-TW|NF|D+|GM
-      - US_11|2.8MB/s|GPT⁺|YT-US|NF|GM|0%
-      - US_12|2.5MB/s|GPT⁺|YT-CN|NF|0%
-      - US_1|3.3MB/s|GPT⁺|YT-US|NF|D+|GM|10%
-      - US_2|2.3MB/s|GPT⁺|YT-US|NF|D+|GM|10%
-      - US_3|2.3MB/s|GPT⁺|YT-US|NF|D+|GM|10%
-      - US_4|2.5MB/s|GPT⁺|YT-US|NF|D+|GM|5%
-      - US_5|2.7MB/s|GPT⁺|YT-US|NF|GM
-      - US_6|3.2MB/s|GPT⁺|YT-US|NF|GM
-      - US_7|2.1MB/s|GPT⁺|YT-US|NF|D+|GM|0%
-      - US_8|2.8MB/s|GPT⁺|YT-US|NF|GM
-      - US_9|2.6MB/s|YT-US|NF|D+|GM|9%
+      - JP_3|4.9MB/s|GPT⁺|YT-CN|NF|D+|0%
+      - JP_4|5.3MB/s|GPT⁺|YT-JP|NF|GM|0%
+      - JP_5|3.4MB/s|GPT⁺|YT-CN|NF|D+|0%
+      - JP_6|3.1MB/s|GPT⁺|YT-CN|NF|D+|0%
+      - MY_1|2.7MB/s|GPT⁺|YT-MY|NF|GM
+      - SG_1|2.2MB/s|GPT|YT-SG|NF|D+|GM|3%
+      - US_1|2.3MB/s|GPT⁺|YT-CN|NF|0%
+      - US_2|2.4MB/s|GPT⁺|YT-US|NF|GM|5%
+      - US_3|2.1MB/s|GPT⁺|YT-CN|NF|D+|10%
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - DE_1|2.1MB/s|YT-DE|NF|D+|9%
-      - FR_1|3.7MB/s|GPT⁺|YT-FR|NF|24%
-      - HK_1|7.4MB/s|GPT⁺|YT-HK|NF|D+|GM|15%
-      - HK_2|10.9MB/s|GPT|YT-HK|NF|D+|GM
-      - HK_3|4.4MB/s|YT-CN|NF|D+|1%
-      - HK_4|3.6MB/s|YT-CN|D+|1%
-      - HK_5|3.7MB/s|YT-CN|NF|D+|1%
-      - JP_11|2.5MB/s|GPT⁺|YT-JP|NF|2%
-      - JP_12|2.5MB/s|GPT⁺|YT-JP|NF|2%
-      - JP_14|2.8MB/s|YT-JP|NF|D+|GM
-      - JP_1|7.9MB/s|GPT⁺|YT-JP|NF|GM|0%
+      - HK_1|2.5MB/s|GPT⁺|YT-HK|NF|D+|GM|15%
+      - JP_1|4.1MB/s|GPT⁺|YT-JP|NF|GM|0%
       - JP_2|5.0MB/s|GPT⁺|YT-JP|NF|D+|GM|3%
-      - JP_3|3.3MB/s|GPT⁺|YT-CN|NF|D+|0%
-      - JP_5|4.3MB/s|GPT⁺|YT-JP|NF|GM|3%
-      - JP_7|3.5MB/s|GPT⁺|YT-JP|NF|GM|2%
-      - JP_8|2.7MB/s|GPT⁺|YT-JP|NF|2%
-      - JP_9|4.0MB/s|GPT⁺|YT-JP|NF|GM|2%
-      - LU_1|2.3MB/s|GPT⁺|YT-LU|NF|52%
-      - SG_1|5.0MB/s|GPT⁺|YT-SG|NF|GM|2%
-      - SG_2|4.0MB/s|GPT⁺|YT-CN|NF
-      - SG_3|5.2MB/s|GPT⁺|YT-CN|NF
-      - SG_4|3.4MB/s|GPT⁺|YT-SG|NF|D+|GM|50%
-      - SG_5|4.0MB/s|GPT⁺|YT-CN|NF
-      - TH_1|5.3MB/s|GPT⁺|YT-TH|NF|GM|17%
-      - TW_1|5.3MB/s|GPT⁺|YT-TW|NF|D+|GM
-      - US_11|2.8MB/s|GPT⁺|YT-US|NF|GM|0%
-      - US_12|2.5MB/s|GPT⁺|YT-CN|NF|0%
-      - US_1|3.3MB/s|GPT⁺|YT-US|NF|D+|GM|10%
-      - US_2|2.3MB/s|GPT⁺|YT-US|NF|D+|GM|10%
-      - US_3|2.3MB/s|GPT⁺|YT-US|NF|D+|GM|10%
-      - US_4|2.5MB/s|GPT⁺|YT-US|NF|D+|GM|5%
-      - US_5|2.7MB/s|GPT⁺|YT-US|NF|GM
-      - US_6|3.2MB/s|GPT⁺|YT-US|NF|GM
-      - US_7|2.1MB/s|GPT⁺|YT-US|NF|D+|GM|0%
-      - US_8|2.8MB/s|GPT⁺|YT-US|NF|GM
-      - US_9|2.6MB/s|YT-US|NF|D+|GM|9%
+      - JP_3|4.9MB/s|GPT⁺|YT-CN|NF|D+|0%
+      - JP_4|5.3MB/s|GPT⁺|YT-JP|NF|GM|0%
+      - JP_5|3.4MB/s|GPT⁺|YT-CN|NF|D+|0%
+      - JP_6|3.1MB/s|GPT⁺|YT-CN|NF|D+|0%
+      - MY_1|2.7MB/s|GPT⁺|YT-MY|NF|GM
+      - SG_1|2.2MB/s|GPT|YT-SG|NF|D+|GM|3%
+      - US_1|2.3MB/s|GPT⁺|YT-CN|NF|0%
+      - US_2|2.4MB/s|GPT⁺|YT-US|NF|GM|5%
+      - US_3|2.1MB/s|GPT⁺|YT-CN|NF|D+|10%
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - DE_1|2.1MB/s|YT-DE|NF|D+|9%
-      - FR_1|3.7MB/s|GPT⁺|YT-FR|NF|24%
-      - HK_1|7.4MB/s|GPT⁺|YT-HK|NF|D+|GM|15%
-      - HK_2|10.9MB/s|GPT|YT-HK|NF|D+|GM
-      - HK_3|4.4MB/s|YT-CN|NF|D+|1%
-      - HK_4|3.6MB/s|YT-CN|D+|1%
-      - HK_5|3.7MB/s|YT-CN|NF|D+|1%
-      - JP_11|2.5MB/s|GPT⁺|YT-JP|NF|2%
-      - JP_12|2.5MB/s|GPT⁺|YT-JP|NF|2%
-      - JP_14|2.8MB/s|YT-JP|NF|D+|GM
-      - JP_1|7.9MB/s|GPT⁺|YT-JP|NF|GM|0%
+      - HK_1|2.5MB/s|GPT⁺|YT-HK|NF|D+|GM|15%
+      - JP_1|4.1MB/s|GPT⁺|YT-JP|NF|GM|0%
       - JP_2|5.0MB/s|GPT⁺|YT-JP|NF|D+|GM|3%
-      - JP_3|3.3MB/s|GPT⁺|YT-CN|NF|D+|0%
-      - JP_5|4.3MB/s|GPT⁺|YT-JP|NF|GM|3%
-      - JP_7|3.5MB/s|GPT⁺|YT-JP|NF|GM|2%
-      - JP_8|2.7MB/s|GPT⁺|YT-JP|NF|2%
-      - JP_9|4.0MB/s|GPT⁺|YT-JP|NF|GM|2%
-      - LU_1|2.3MB/s|GPT⁺|YT-LU|NF|52%
-      - SG_1|5.0MB/s|GPT⁺|YT-SG|NF|GM|2%
-      - SG_2|4.0MB/s|GPT⁺|YT-CN|NF
-      - SG_3|5.2MB/s|GPT⁺|YT-CN|NF
-      - SG_4|3.4MB/s|GPT⁺|YT-SG|NF|D+|GM|50%
-      - SG_5|4.0MB/s|GPT⁺|YT-CN|NF
-      - TH_1|5.3MB/s|GPT⁺|YT-TH|NF|GM|17%
-      - TW_1|5.3MB/s|GPT⁺|YT-TW|NF|D+|GM
-      - US_11|2.8MB/s|GPT⁺|YT-US|NF|GM|0%
-      - US_12|2.5MB/s|GPT⁺|YT-CN|NF|0%
-      - US_1|3.3MB/s|GPT⁺|YT-US|NF|D+|GM|10%
-      - US_2|2.3MB/s|GPT⁺|YT-US|NF|D+|GM|10%
-      - US_3|2.3MB/s|GPT⁺|YT-US|NF|D+|GM|10%
-      - US_4|2.5MB/s|GPT⁺|YT-US|NF|D+|GM|5%
-      - US_5|2.7MB/s|GPT⁺|YT-US|NF|GM
-      - US_6|3.2MB/s|GPT⁺|YT-US|NF|GM
-      - US_7|2.1MB/s|GPT⁺|YT-US|NF|D+|GM|0%
-      - US_8|2.8MB/s|GPT⁺|YT-US|NF|GM
-      - US_9|2.6MB/s|YT-US|NF|D+|GM|9%
+      - JP_3|4.9MB/s|GPT⁺|YT-CN|NF|D+|0%
+      - JP_4|5.3MB/s|GPT⁺|YT-JP|NF|GM|0%
+      - JP_5|3.4MB/s|GPT⁺|YT-CN|NF|D+|0%
+      - JP_6|3.1MB/s|GPT⁺|YT-CN|NF|D+|0%
+      - MY_1|2.7MB/s|GPT⁺|YT-MY|NF|GM
+      - SG_1|2.2MB/s|GPT|YT-SG|NF|D+|GM|3%
+      - US_1|2.3MB/s|GPT⁺|YT-CN|NF|0%
+      - US_2|2.4MB/s|GPT⁺|YT-US|NF|GM|5%
+      - US_3|2.1MB/s|GPT⁺|YT-CN|NF|D+|10%
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - DE_1|2.1MB/s|YT-DE|NF|D+|9%
-      - FR_1|3.7MB/s|GPT⁺|YT-FR|NF|24%
-      - HK_1|7.4MB/s|GPT⁺|YT-HK|NF|D+|GM|15%
-      - HK_2|10.9MB/s|GPT|YT-HK|NF|D+|GM
-      - HK_3|4.4MB/s|YT-CN|NF|D+|1%
-      - HK_4|3.6MB/s|YT-CN|D+|1%
-      - HK_5|3.7MB/s|YT-CN|NF|D+|1%
-      - JP_11|2.5MB/s|GPT⁺|YT-JP|NF|2%
-      - JP_12|2.5MB/s|GPT⁺|YT-JP|NF|2%
-      - JP_14|2.8MB/s|YT-JP|NF|D+|GM
-      - JP_1|7.9MB/s|GPT⁺|YT-JP|NF|GM|0%
+      - HK_1|2.5MB/s|GPT⁺|YT-HK|NF|D+|GM|15%
+      - JP_1|4.1MB/s|GPT⁺|YT-JP|NF|GM|0%
       - JP_2|5.0MB/s|GPT⁺|YT-JP|NF|D+|GM|3%
-      - JP_3|3.3MB/s|GPT⁺|YT-CN|NF|D+|0%
-      - JP_5|4.3MB/s|GPT⁺|YT-JP|NF|GM|3%
-      - JP_7|3.5MB/s|GPT⁺|YT-JP|NF|GM|2%
-      - JP_8|2.7MB/s|GPT⁺|YT-JP|NF|2%
-      - JP_9|4.0MB/s|GPT⁺|YT-JP|NF|GM|2%
-      - LU_1|2.3MB/s|GPT⁺|YT-LU|NF|52%
-      - SG_1|5.0MB/s|GPT⁺|YT-SG|NF|GM|2%
-      - SG_2|4.0MB/s|GPT⁺|YT-CN|NF
-      - SG_3|5.2MB/s|GPT⁺|YT-CN|NF
-      - SG_4|3.4MB/s|GPT⁺|YT-SG|NF|D+|GM|50%
-      - SG_5|4.0MB/s|GPT⁺|YT-CN|NF
-      - TH_1|5.3MB/s|GPT⁺|YT-TH|NF|GM|17%
-      - TW_1|5.3MB/s|GPT⁺|YT-TW|NF|D+|GM
-      - US_11|2.8MB/s|GPT⁺|YT-US|NF|GM|0%
-      - US_12|2.5MB/s|GPT⁺|YT-CN|NF|0%
-      - US_1|3.3MB/s|GPT⁺|YT-US|NF|D+|GM|10%
-      - US_2|2.3MB/s|GPT⁺|YT-US|NF|D+|GM|10%
-      - US_3|2.3MB/s|GPT⁺|YT-US|NF|D+|GM|10%
-      - US_4|2.5MB/s|GPT⁺|YT-US|NF|D+|GM|5%
-      - US_5|2.7MB/s|GPT⁺|YT-US|NF|GM
-      - US_6|3.2MB/s|GPT⁺|YT-US|NF|GM
-      - US_7|2.1MB/s|GPT⁺|YT-US|NF|D+|GM|0%
-      - US_8|2.8MB/s|GPT⁺|YT-US|NF|GM
-      - US_9|2.6MB/s|YT-US|NF|D+|GM|9%
+      - JP_3|4.9MB/s|GPT⁺|YT-CN|NF|D+|0%
+      - JP_4|5.3MB/s|GPT⁺|YT-JP|NF|GM|0%
+      - JP_5|3.4MB/s|GPT⁺|YT-CN|NF|D+|0%
+      - JP_6|3.1MB/s|GPT⁺|YT-CN|NF|D+|0%
+      - MY_1|2.7MB/s|GPT⁺|YT-MY|NF|GM
+      - SG_1|2.2MB/s|GPT|YT-SG|NF|D+|GM|3%
+      - US_1|2.3MB/s|GPT⁺|YT-CN|NF|0%
+      - US_2|2.4MB/s|GPT⁺|YT-US|NF|GM|5%
+      - US_3|2.1MB/s|GPT⁺|YT-CN|NF|D+|10%
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - DE_1|2.1MB/s|YT-DE|NF|D+|9%
-      - FR_1|3.7MB/s|GPT⁺|YT-FR|NF|24%
-      - HK_1|7.4MB/s|GPT⁺|YT-HK|NF|D+|GM|15%
-      - HK_2|10.9MB/s|GPT|YT-HK|NF|D+|GM
-      - HK_3|4.4MB/s|YT-CN|NF|D+|1%
-      - HK_4|3.6MB/s|YT-CN|D+|1%
-      - HK_5|3.7MB/s|YT-CN|NF|D+|1%
-      - JP_11|2.5MB/s|GPT⁺|YT-JP|NF|2%
-      - JP_12|2.5MB/s|GPT⁺|YT-JP|NF|2%
-      - JP_14|2.8MB/s|YT-JP|NF|D+|GM
-      - JP_1|7.9MB/s|GPT⁺|YT-JP|NF|GM|0%
+      - HK_1|2.5MB/s|GPT⁺|YT-HK|NF|D+|GM|15%
+      - JP_1|4.1MB/s|GPT⁺|YT-JP|NF|GM|0%
       - JP_2|5.0MB/s|GPT⁺|YT-JP|NF|D+|GM|3%
-      - JP_3|3.3MB/s|GPT⁺|YT-CN|NF|D+|0%
-      - JP_5|4.3MB/s|GPT⁺|YT-JP|NF|GM|3%
-      - JP_7|3.5MB/s|GPT⁺|YT-JP|NF|GM|2%
-      - JP_8|2.7MB/s|GPT⁺|YT-JP|NF|2%
-      - JP_9|4.0MB/s|GPT⁺|YT-JP|NF|GM|2%
-      - LU_1|2.3MB/s|GPT⁺|YT-LU|NF|52%
-      - SG_1|5.0MB/s|GPT⁺|YT-SG|NF|GM|2%
-      - SG_2|4.0MB/s|GPT⁺|YT-CN|NF
-      - SG_3|5.2MB/s|GPT⁺|YT-CN|NF
-      - SG_4|3.4MB/s|GPT⁺|YT-SG|NF|D+|GM|50%
-      - SG_5|4.0MB/s|GPT⁺|YT-CN|NF
-      - TH_1|5.3MB/s|GPT⁺|YT-TH|NF|GM|17%
-      - TW_1|5.3MB/s|GPT⁺|YT-TW|NF|D+|GM
-      - US_11|2.8MB/s|GPT⁺|YT-US|NF|GM|0%
-      - US_12|2.5MB/s|GPT⁺|YT-CN|NF|0%
-      - US_1|3.3MB/s|GPT⁺|YT-US|NF|D+|GM|10%
-      - US_2|2.3MB/s|GPT⁺|YT-US|NF|D+|GM|10%
-      - US_3|2.3MB/s|GPT⁺|YT-US|NF|D+|GM|10%
-      - US_4|2.5MB/s|GPT⁺|YT-US|NF|D+|GM|5%
-      - US_5|2.7MB/s|GPT⁺|YT-US|NF|GM
-      - US_6|3.2MB/s|GPT⁺|YT-US|NF|GM
-      - US_7|2.1MB/s|GPT⁺|YT-US|NF|D+|GM|0%
-      - US_8|2.8MB/s|GPT⁺|YT-US|NF|GM
-      - US_9|2.6MB/s|YT-US|NF|D+|GM|9%
+      - JP_3|4.9MB/s|GPT⁺|YT-CN|NF|D+|0%
+      - JP_4|5.3MB/s|GPT⁺|YT-JP|NF|GM|0%
+      - JP_5|3.4MB/s|GPT⁺|YT-CN|NF|D+|0%
+      - JP_6|3.1MB/s|GPT⁺|YT-CN|NF|D+|0%
+      - MY_1|2.7MB/s|GPT⁺|YT-MY|NF|GM
+      - SG_1|2.2MB/s|GPT|YT-SG|NF|D+|GM|3%
+      - US_1|2.3MB/s|GPT⁺|YT-CN|NF|0%
+      - US_2|2.4MB/s|GPT⁺|YT-US|NF|GM|5%
+      - US_3|2.1MB/s|GPT⁺|YT-CN|NF|D+|10%
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - DE_1|2.1MB/s|YT-DE|NF|D+|9%
-      - FR_1|3.7MB/s|GPT⁺|YT-FR|NF|24%
-      - HK_1|7.4MB/s|GPT⁺|YT-HK|NF|D+|GM|15%
-      - HK_2|10.9MB/s|GPT|YT-HK|NF|D+|GM
-      - HK_3|4.4MB/s|YT-CN|NF|D+|1%
-      - HK_4|3.6MB/s|YT-CN|D+|1%
-      - HK_5|3.7MB/s|YT-CN|NF|D+|1%
-      - JP_11|2.5MB/s|GPT⁺|YT-JP|NF|2%
-      - JP_12|2.5MB/s|GPT⁺|YT-JP|NF|2%
-      - JP_14|2.8MB/s|YT-JP|NF|D+|GM
-      - JP_1|7.9MB/s|GPT⁺|YT-JP|NF|GM|0%
+      - HK_1|2.5MB/s|GPT⁺|YT-HK|NF|D+|GM|15%
+      - JP_1|4.1MB/s|GPT⁺|YT-JP|NF|GM|0%
       - JP_2|5.0MB/s|GPT⁺|YT-JP|NF|D+|GM|3%
-      - JP_3|3.3MB/s|GPT⁺|YT-CN|NF|D+|0%
-      - JP_5|4.3MB/s|GPT⁺|YT-JP|NF|GM|3%
-      - JP_7|3.5MB/s|GPT⁺|YT-JP|NF|GM|2%
-      - JP_8|2.7MB/s|GPT⁺|YT-JP|NF|2%
-      - JP_9|4.0MB/s|GPT⁺|YT-JP|NF|GM|2%
-      - LU_1|2.3MB/s|GPT⁺|YT-LU|NF|52%
-      - SG_1|5.0MB/s|GPT⁺|YT-SG|NF|GM|2%
-      - SG_2|4.0MB/s|GPT⁺|YT-CN|NF
-      - SG_3|5.2MB/s|GPT⁺|YT-CN|NF
-      - SG_4|3.4MB/s|GPT⁺|YT-SG|NF|D+|GM|50%
-      - SG_5|4.0MB/s|GPT⁺|YT-CN|NF
-      - TH_1|5.3MB/s|GPT⁺|YT-TH|NF|GM|17%
-      - TW_1|5.3MB/s|GPT⁺|YT-TW|NF|D+|GM
-      - US_11|2.8MB/s|GPT⁺|YT-US|NF|GM|0%
-      - US_12|2.5MB/s|GPT⁺|YT-CN|NF|0%
-      - US_1|3.3MB/s|GPT⁺|YT-US|NF|D+|GM|10%
-      - US_2|2.3MB/s|GPT⁺|YT-US|NF|D+|GM|10%
-      - US_3|2.3MB/s|GPT⁺|YT-US|NF|D+|GM|10%
-      - US_4|2.5MB/s|GPT⁺|YT-US|NF|D+|GM|5%
-      - US_5|2.7MB/s|GPT⁺|YT-US|NF|GM
-      - US_6|3.2MB/s|GPT⁺|YT-US|NF|GM
-      - US_7|2.1MB/s|GPT⁺|YT-US|NF|D+|GM|0%
-      - US_8|2.8MB/s|GPT⁺|YT-US|NF|GM
-      - US_9|2.6MB/s|YT-US|NF|D+|GM|9%
+      - JP_3|4.9MB/s|GPT⁺|YT-CN|NF|D+|0%
+      - JP_4|5.3MB/s|GPT⁺|YT-JP|NF|GM|0%
+      - JP_5|3.4MB/s|GPT⁺|YT-CN|NF|D+|0%
+      - JP_6|3.1MB/s|GPT⁺|YT-CN|NF|D+|0%
+      - MY_1|2.7MB/s|GPT⁺|YT-MY|NF|GM
+      - SG_1|2.2MB/s|GPT|YT-SG|NF|D+|GM|3%
+      - US_1|2.3MB/s|GPT⁺|YT-CN|NF|0%
+      - US_2|2.4MB/s|GPT⁺|YT-US|NF|GM|5%
+      - US_3|2.1MB/s|GPT⁺|YT-CN|NF|D+|10%
   - name: 📢 谷歌FCM
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - DE_1|2.1MB/s|YT-DE|NF|D+|9%
-      - FR_1|3.7MB/s|GPT⁺|YT-FR|NF|24%
-      - HK_1|7.4MB/s|GPT⁺|YT-HK|NF|D+|GM|15%
-      - HK_2|10.9MB/s|GPT|YT-HK|NF|D+|GM
-      - HK_3|4.4MB/s|YT-CN|NF|D+|1%
-      - HK_4|3.6MB/s|YT-CN|D+|1%
-      - HK_5|3.7MB/s|YT-CN|NF|D+|1%
-      - JP_11|2.5MB/s|GPT⁺|YT-JP|NF|2%
-      - JP_12|2.5MB/s|GPT⁺|YT-JP|NF|2%
-      - JP_14|2.8MB/s|YT-JP|NF|D+|GM
-      - JP_1|7.9MB/s|GPT⁺|YT-JP|NF|GM|0%
+      - HK_1|2.5MB/s|GPT⁺|YT-HK|NF|D+|GM|15%
+      - JP_1|4.1MB/s|GPT⁺|YT-JP|NF|GM|0%
       - JP_2|5.0MB/s|GPT⁺|YT-JP|NF|D+|GM|3%
-      - JP_3|3.3MB/s|GPT⁺|YT-CN|NF|D+|0%
-      - JP_5|4.3MB/s|GPT⁺|YT-JP|NF|GM|3%
-      - JP_7|3.5MB/s|GPT⁺|YT-JP|NF|GM|2%
-      - JP_8|2.7MB/s|GPT⁺|YT-JP|NF|2%
-      - JP_9|4.0MB/s|GPT⁺|YT-JP|NF|GM|2%
-      - LU_1|2.3MB/s|GPT⁺|YT-LU|NF|52%
-      - SG_1|5.0MB/s|GPT⁺|YT-SG|NF|GM|2%
-      - SG_2|4.0MB/s|GPT⁺|YT-CN|NF
-      - SG_3|5.2MB/s|GPT⁺|YT-CN|NF
-      - SG_4|3.4MB/s|GPT⁺|YT-SG|NF|D+|GM|50%
-      - SG_5|4.0MB/s|GPT⁺|YT-CN|NF
-      - TH_1|5.3MB/s|GPT⁺|YT-TH|NF|GM|17%
-      - TW_1|5.3MB/s|GPT⁺|YT-TW|NF|D+|GM
-      - US_11|2.8MB/s|GPT⁺|YT-US|NF|GM|0%
-      - US_12|2.5MB/s|GPT⁺|YT-CN|NF|0%
-      - US_1|3.3MB/s|GPT⁺|YT-US|NF|D+|GM|10%
-      - US_2|2.3MB/s|GPT⁺|YT-US|NF|D+|GM|10%
-      - US_3|2.3MB/s|GPT⁺|YT-US|NF|D+|GM|10%
-      - US_4|2.5MB/s|GPT⁺|YT-US|NF|D+|GM|5%
-      - US_5|2.7MB/s|GPT⁺|YT-US|NF|GM
-      - US_6|3.2MB/s|GPT⁺|YT-US|NF|GM
-      - US_7|2.1MB/s|GPT⁺|YT-US|NF|D+|GM|0%
-      - US_8|2.8MB/s|GPT⁺|YT-US|NF|GM
-      - US_9|2.6MB/s|YT-US|NF|D+|GM|9%
+      - JP_3|4.9MB/s|GPT⁺|YT-CN|NF|D+|0%
+      - JP_4|5.3MB/s|GPT⁺|YT-JP|NF|GM|0%
+      - JP_5|3.4MB/s|GPT⁺|YT-CN|NF|D+|0%
+      - JP_6|3.1MB/s|GPT⁺|YT-CN|NF|D+|0%
+      - MY_1|2.7MB/s|GPT⁺|YT-MY|NF|GM
+      - SG_1|2.2MB/s|GPT|YT-SG|NF|D+|GM|3%
+      - US_1|2.3MB/s|GPT⁺|YT-CN|NF|0%
+      - US_2|2.4MB/s|GPT⁺|YT-US|NF|GM|5%
+      - US_3|2.1MB/s|GPT⁺|YT-CN|NF|D+|10%
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -354,42 +162,18 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - DE_1|2.1MB/s|YT-DE|NF|D+|9%
-      - FR_1|3.7MB/s|GPT⁺|YT-FR|NF|24%
-      - HK_1|7.4MB/s|GPT⁺|YT-HK|NF|D+|GM|15%
-      - HK_2|10.9MB/s|GPT|YT-HK|NF|D+|GM
-      - HK_3|4.4MB/s|YT-CN|NF|D+|1%
-      - HK_4|3.6MB/s|YT-CN|D+|1%
-      - HK_5|3.7MB/s|YT-CN|NF|D+|1%
-      - JP_11|2.5MB/s|GPT⁺|YT-JP|NF|2%
-      - JP_12|2.5MB/s|GPT⁺|YT-JP|NF|2%
-      - JP_14|2.8MB/s|YT-JP|NF|D+|GM
-      - JP_1|7.9MB/s|GPT⁺|YT-JP|NF|GM|0%
+      - HK_1|2.5MB/s|GPT⁺|YT-HK|NF|D+|GM|15%
+      - JP_1|4.1MB/s|GPT⁺|YT-JP|NF|GM|0%
       - JP_2|5.0MB/s|GPT⁺|YT-JP|NF|D+|GM|3%
-      - JP_3|3.3MB/s|GPT⁺|YT-CN|NF|D+|0%
-      - JP_5|4.3MB/s|GPT⁺|YT-JP|NF|GM|3%
-      - JP_7|3.5MB/s|GPT⁺|YT-JP|NF|GM|2%
-      - JP_8|2.7MB/s|GPT⁺|YT-JP|NF|2%
-      - JP_9|4.0MB/s|GPT⁺|YT-JP|NF|GM|2%
-      - LU_1|2.3MB/s|GPT⁺|YT-LU|NF|52%
-      - SG_1|5.0MB/s|GPT⁺|YT-SG|NF|GM|2%
-      - SG_2|4.0MB/s|GPT⁺|YT-CN|NF
-      - SG_3|5.2MB/s|GPT⁺|YT-CN|NF
-      - SG_4|3.4MB/s|GPT⁺|YT-SG|NF|D+|GM|50%
-      - SG_5|4.0MB/s|GPT⁺|YT-CN|NF
-      - TH_1|5.3MB/s|GPT⁺|YT-TH|NF|GM|17%
-      - TW_1|5.3MB/s|GPT⁺|YT-TW|NF|D+|GM
-      - US_11|2.8MB/s|GPT⁺|YT-US|NF|GM|0%
-      - US_12|2.5MB/s|GPT⁺|YT-CN|NF|0%
-      - US_1|3.3MB/s|GPT⁺|YT-US|NF|D+|GM|10%
-      - US_2|2.3MB/s|GPT⁺|YT-US|NF|D+|GM|10%
-      - US_3|2.3MB/s|GPT⁺|YT-US|NF|D+|GM|10%
-      - US_4|2.5MB/s|GPT⁺|YT-US|NF|D+|GM|5%
-      - US_5|2.7MB/s|GPT⁺|YT-US|NF|GM
-      - US_6|3.2MB/s|GPT⁺|YT-US|NF|GM
-      - US_7|2.1MB/s|GPT⁺|YT-US|NF|D+|GM|0%
-      - US_8|2.8MB/s|GPT⁺|YT-US|NF|GM
-      - US_9|2.6MB/s|YT-US|NF|D+|GM|9%
+      - JP_3|4.9MB/s|GPT⁺|YT-CN|NF|D+|0%
+      - JP_4|5.3MB/s|GPT⁺|YT-JP|NF|GM|0%
+      - JP_5|3.4MB/s|GPT⁺|YT-CN|NF|D+|0%
+      - JP_6|3.1MB/s|GPT⁺|YT-CN|NF|D+|0%
+      - MY_1|2.7MB/s|GPT⁺|YT-MY|NF|GM
+      - SG_1|2.2MB/s|GPT|YT-SG|NF|D+|GM|3%
+      - US_1|2.3MB/s|GPT⁺|YT-CN|NF|0%
+      - US_2|2.4MB/s|GPT⁺|YT-US|NF|GM|5%
+      - US_3|2.1MB/s|GPT⁺|YT-CN|NF|D+|10%
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
